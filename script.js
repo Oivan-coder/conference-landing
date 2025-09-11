@@ -87,24 +87,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // === 5. Анимация появления секций при скролле ===
+  // === Анимация появления секций при скролле ===
   const sections = document.querySelectorAll('section');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1 }); // Секция считается "видимой", когда 10% в зоне просмотра
+  }, { threshold: 0.1 }); // Секция становится видимой при 10% в зоне просмотра
 
   sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(section);
   });
-
-
   // === 6. Кнопка "Добавить в календарь" (.ics файл) ===
   const addCalendarButton = document.getElementById('addToCal');
   if (addCalendarButton) {
