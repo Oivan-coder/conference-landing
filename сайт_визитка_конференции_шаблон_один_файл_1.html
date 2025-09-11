@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лабораторная медицина Подмосковья — этапы, инновации, перспективы</title>
+  <meta name="description" content="Официальная конференция: Лабораторная медицина Подмосковья — этапы, инновации, перспективы. Программа, спикеры, интерактивный таймлайн, RSVP и добавление в календарь." />
+  <style>
+    :root{
+      --bg:#0f172a;          /* темный фон */
+      --panel:#0b1220;       /* глубокий фон карточек */
+      --ink:#e5e7eb;         /* основной текст */
+      --muted:#9aa4b2;       /* вторичный текст */
+      --line:#1f2a44;        /* разделители */
+      --accent:#22d3ee;      /* акцент (бирюзовый) */
+      --accent-2:#60a5fa;    /* второй акцент (голубой) */
+      --warn:#f59e0b;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:radial-gradient(1200px 800px at 80% -10%, rgba(34,211,238,0.08), transparent), linear-gradient(180deg, #0b1220 0%, #0f172a 100%); color:var(--ink);}    
+    a{color:var(--accent)} a:hover{opacity:.9}
+    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+
+    /* NAV */
+    .nav{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(10px); background:rgba(11,18,32,.6); border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.2px}
+    .brand-badge{width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:grid; place-items:center; font-weight:800; color:#001018}
+    .nav a{color:var(--ink); text-decoration:none; padding:8px 10px; border-radius:8px}
+    .nav a:hover{background:rgba(96,165,250,.08)}
+
+    /* HERO */
+    .hero{position:relative; overflow:hidden}
+    .hero .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:58px 0 36px}
+    .kicker{display:inline-flex; gap:10px; align-items:center; font-size:13px; color:var(--muted); border:1px solid var(--line); padding:6px 10px; border-radius:999px}
+    .title{font-size:42px; line-height:1.1; font-weight:800; margin:12px 0 12px; letter-spacing:-.02em}
+    .subtitle{color:var(--muted); max-width:640px}
+    .hero-cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid var(--line); background:#101a32; color:var(--ink); font-weight:700; cursor:pointer}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#001018}
+    .meta{display:flex; gap:16px; flex-wrap:wrap; margin-top:18px; color:var(--muted); font-size:14px}
+
+    /* Countdown */
+    .countdown{display:flex; gap:12px; margin-top:16px}
+    .cd-box{min-width:68px; text-align:center; background:#0a142a; border:1px solid var(--line); border-radius:14px; padding:10px}
+    .cd-num{font-size:22px; font-weight:800}
+    .cd-label{font-size:11px; color:var(--muted)}
+
+    /* Sections */
+    section{padding:52px 0; border-top:1px solid var(--line)}
+    .section-title{font-size:28px; font-weight:800; margin:0 0 8px}
+    .section-note{color:var(--muted); margin:0 0 18px}
+
+    /* Tabs for program */
+    .tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px}
+    .tab{padding:8px 12px; border-radius:999px; background:#0a142a; border:1px solid var(--line); cursor:pointer; color:var(--muted)}
+    .tab.active{background:linear-gradient(135deg, rgba(34,211,238,.18), rgba(96,165,250,.18)); color:var(--ink)}
+
+    .timeline{display:grid; gap:10px}
+    .slot{border:1px solid var(--line); border-radius:14px; padding:14px 16px; background:#0b1326; position:relative; overflow:hidden}
+    .slot h4{margin:0 0 6px; font-size:16px}
+    .slot .time{font-weight:800; color:var(--accent)}
+    .slot .more{color:var(--muted); margin-top:4px}
+    .slot details{margin-top:8px}
+    .slot summary{cursor:pointer; list-style:none}
+    .slot summary::-webkit-details-marker{display:none}
+
+    /* Speakers */
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+    @media(max-width:980px){.cards{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){.hero .grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, #0b1428, #0b1422); border:1px solid var(--line); border-radius:16px; padding:16px; position:relative; overflow:hidden}
+    .avatar{height:64px; width:64px; border-radius:14px; background:#0d1b34; border:1px solid var(--line)}
+    .card h4{margin:8px 0 4px}
+    .badge{display:inline-flex; gap:6px; align-items:center; padding:6px 10px; border-radius:999px; border:1px solid var(--line); color:var(--muted); font-size:12px}
+
+    /* Info grid */
+    .grid2{display:grid; grid-template-columns:1.1fr .9fr; gap:16px}
+    @media(max-width:980px){.grid2{grid-template-columns:1fr}}
+    .panel{background:#0b1326; border:1px solid var(--line); border-radius:16px; padding:16px}
+    .map{width:100%; height:350px; border:0; border-radius:12px}
+
+    /* Sticky progress */
+    .progress{position:fixed; left:0; top:0; height:3px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); width:0; z-index:60}
+
+    /* Modal */
+    .modal-backdrop{position:fixed; inset:0; background:rgba(1,4,12,.6); display:none; align-items:center; justify-content:center; z-index:70}
+    .modal{width:min(560px, 92vw); background:#0b1326; border:1px solid var(--line); border-radius:16px; padding:18px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .row-1{display:grid; grid-template-columns:1fr; gap:12px}
+    .field{display:flex; flex-direction:column; gap:6px}
+    label{font-size:13px; color:var(--muted)}
+    input,select,textarea{background:#0a142a; border:1px solid var(--line); border-radius:12px; padding:10px 12px; color:var(--ink)}
+    textarea{min-height:80px}
+    .modal-actions{display:flex; gap:10px; justify-content:flex-end; margin-top:12px}
+
+    /* CTA stripe */
+    .cta-stripe{margin-top:16px; background:linear-gradient(90deg, rgba(34,211,238,.12), rgba(96,165,250,.12)); border:1px solid var(--line); border-radius:16px; padding:12px 14px; display:flex; align-items:center; justify-content:space-between; gap:12px}
+
+    footer{padding:32px 0; color:var(--muted); border-top:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><div class="brand-badge">🧪</div>Лаб.медицина</div>
+      <div>
+        <a href="#about">О событии</a>
+        <a href="#program">Программа</a>
+        <a href="#speakers">Спикеры</a>
+        <a href="#info">Гостям</a>
+        <a href="#rsvp" id="openRSVP" class="btn" style="margin-left:8px; padding:8px 12px">RSVP</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container grid">
+      <div>
+        <div class="kicker">Официальная конференция Московской области • очно</div>
+        <h1 class="title">Лабораторная медицина Подмосковья:<br>этапы, инновации, перспективы</h1>
+        <p class="subtitle">Живой разговор о стандартах, качестве и внедрении технологий в лабораторной службе региона. Таймлайн, треки и практические кейсы — без воды.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" id="openRSVP2">Зарегистрироваться</button>
+          <a class="btn" href="#program">Смотреть программу</a>
+          <button class="btn" id="addToCal">Добавить в календарь</button>
+        </div>
+        <div class="meta">
+          <span>📅 25 сентября 2025 (четверг), 11:00–18:00</span>
+          <span>📍 Дом Правительства МО, г. Красногорск, БЦ «Новатор», 7 эт., конференц‑зал</span>
+          <span>👥 150 участников</span>
+        </div>
+        <div class="countdown" id="countdown" aria-label="До начала">
+          <div class="cd-box"><div class="cd-num" id="cd-d">00</div><div class="cd-label">дней</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-h">00</div><div class="cd-label">часов</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-m">00</div><div class="cd-label">мин</div></div>
+          <div class="cd-box"><div class="cd-num" id="cd-s">00</div><div class="cd-label">сек</div></div>
+        </div>
+        <div class="cta-stripe">
+          <div>Регистрация обязательна. После подтверждения вы получите письмо с деталями прохода.</div>
+          <button class="btn btn-primary" id="openRSVP3">Оставить заявку</button>
+        </div>
+      </div>
+      <div>
+        <canvas id="heroCanvas" width="640" height="420" style="width:100%; aspect-ratio: 16 / 10; border:1px solid var(--line); border-radius:16px; background:#0a142a"></canvas>
+        <p class="section-note">На холсте справа — абстрактная «сигнатура» потока данных: частицы реагируют на движение мыши.</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">О событии</h2>
+      <p class="section-note">Цель — синхронизировать подходы к качеству лабораторной диагностики, обсудить этапы, инновации и практические решения для ЛПУ Московской области.</p>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Кому будет полезно</h3>
+          <ul>
+            <li>врачам КДЛ;</li>
+            <li>главным медсёстрам;</li>
+            <li>старшим лаборантам / фельдшерам;</li>
+            <li>работникам лабораторной логистики и ИТ (ЛИС/ЕМИАС/БРЕГИС).</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Что получите</h3>
+          <ul>
+            <li>собранную картину этапов: от взятия проб до валидации;</li>
+            <li>нормативные ориентиры и чек-листы качества;</li>
+            <li>практические кейсы централизации и интеграции ЛИС;</li>
+            <li>нетворкинг и договорённости о сотрудничестве.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="container">
+      <h2 class="section-title">Программа</h2>
+      <p class="section-note">Выберите трек, чтобы сфокусировать список докладов. Раскрывайте детали по клику.</p>
+      <div class="tabs" id="progTabs">
+        <button class="tab active" data-tag="all">Все</button>
+        <button class="tab" data-tag="организация">Организация</button>
+        <button class="tab" data-tag="процессы">Процессы</button>
+        <button class="tab" data-tag="качество">Качество</button>
+        <button class="tab" data-tag="ит">ИТ/ЛИС</button>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="slot" data-tags="организация">
+          <h4><span class="time">11:00–12:00</span> — Регистрация и приветственный кофе</h4>
+          <div class="more">Выдача бейджей, знакомство.</div>
+        </div>
+        <div class="slot" data-tags="организация">
+          <h4><span class="time">12:00–12:30</span> — Открытие конференции</h4>
+          <details>
+            <summary>Кто открывает</summary>
+            <ul>
+              <li><strong>Максим Забелин</strong> — Заместитель Председателя Правительства МО, министр здравоохранения МО</li>
+              <li><strong>Михаил Годков</strong> — РМАНПО; врач КЛД НИИ им. Н.В. Склифосовского</li>
+              <li><strong>Андрей Иванов</strong> — Президент ФЛМ, член-корр. РАН, профессор, д.м.н.</li>
+            </ul>
+          </details>
+        </div>
+        <div class="slot" data-tags="организация ит процессы качество">
+          <h4><span class="time">12:30–15:00</span> — Сессия «Лабораторная служба Московской области»</h4>
+          <details open>
+            <summary>Список докладов</summary>
+            <ol>
+              <li><strong>Централизация лабораторной службы</strong> — И.В. Щеблыкина‑Монастырёва (главный внештатный специалист по КЛД МЗ МО; руководитель проекта ГКУ МО «ЦВИОД»)</li>
+              <li><strong>Стандартизация взятия и маркировки проб</strong> — О.А. Косенко (зав. КДЛ ГБУЗ МО «Балашихинская больница»)</li>
+              <li><strong>Логистика и транспортировка проб</strong> — М.С. Извекова (ГБУЗ МО «Истринская клиническая больница»)</li>
+              <li><strong>Регистрация и приёмка проб: интеграция с ЛИС</strong> — Е.Е. Житкова (ГБУЗ МО «Одинцовская областная больница»)</li>
+              <li><strong>Цитологическая диагностика: программы и хронометраж</strong> — Ж.И. Вострикова (МЗ МО; ФЛМ, РООП, EFLM, АКЦР, NATH, РООУ; эксперт ФФОМС)</li>
+              <li><strong>Обработка несоответствий и политика возврата/утилизации проб</strong> — Е.А. Тен (ГБУЗ МО «Домодедовская больница»)</li>
+            </ol>
+          </details>
+        </div>
+        <div class="slot" data-tags="организация">
+          <h4><span class="time">15:00–15:30</span> — Кофе-брейк</h4>
+        </div>
+        <div class="slot" data-tags="качество ит организация">
+          <h4><span class="time">15:30–16:00</span> — Приглашённые эксперты (согласование)</h4>
+          <details>
+            <summary>Предварительно согласованные доклады</summary>
+            <ul>
+              <li>Т.В. Припутневич — НМИЦ АГиП им. В.И. Кулакова, Минздрав РФ</li>
+              <li>А.А. Воронков — Комитет здравоохранения Волгоградской области</li>
+              <li>М.Г. Ламбакахар — РМАНПО, Минздрав России</li>
+              <li>О.С. Калачева — АО «Группа компаний МЕДСИ»</li>
+              <li>И.Г. Сунцова — Региональный комитет ФЛМ по Московской области</li>
+            </ul>
+            <div class="section-note">Полная информация будет направлена дополнительно.</div>
+          </details>
+        </div>
+        <div class="slot" data-tags="организация">
+          <h4><span class="time">16:00–16:10</span> — Закрытие конференции</h4>
+          <div class="more">Подведение итогов.</div>
+        </div>
+        <div class="slot" data-tags="организация">
+          <h4><span class="time">16:10–18:00</span> — Фуршет и неформальное общение</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="container">
+      <h2 class="section-title">Спикеры</h2>
+      <p class="section-note">Наведите курсор, чтобы увидеть краткую биографию.</p>
+      <div class="cards" id="spCards">
+        <div class="card"><div class="avatar"></div><h4>И.В. Щеблыкина‑Монастырёва</h4><div class="badge">Централизация</div><p class="section-note">Главный внештатный специалист по КЛД МЗ МО; руководитель проекта ГКУ МО «ЦВИОД».</p></div>
+        <div class="card"><div class="avatar"></div><h4>О.А. Косенко</h4><div class="badge">Стандартизация</div><p class="section-note">Заведующий КДЛ ГБУЗ МО «Балашихинская больница».</p></div>
+        <div class="card"><div class="avatar"></div><h4>М.С. Извекова</h4><div class="badge">Логистика</div><p class="section-note">Руководитель службы лабораторной диагностики ГБУЗ МО «Истринская КБ».</p></div>
+        <div class="card"><div class="avatar"></div><h4>Е.Е. Житкова</h4><div class="badge">ИТ/ЛИС</div><p class="section-note">Заведующий КДЛ ГБУЗ МО «Одинцовская ОКБ».</p></div>
+        <div class="card"><div class="avatar"></div><h4>Ж.И. Вострикова</h4><div class="badge">Цитология</div><p class="section-note">Управление специализированной мед. помощи МЗ МО; эксперт ФФОМС.</p></div>
+        <div class="card"><div class="avatar"></div><h4>Е.А. Тен</h4><div class="badge">Качество</div><p class="section-note">Заведующий КДЛ ГБУЗ МО «Домодедовская больница».</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info">
+    <div class="container">
+      <h2 class="section-title">Информация для гостей</h2>
+      <div class="grid2">
+        <div class="panel">
+          <h3>Площадка</h3>
+          <p>Дом Правительства Московской области, г. Красногорск, БЦ «Новатор», 7 этаж, конференц‑зал</p>
+          <ul>
+            <li>Регистрация с 11:00. При себе — документ.</li>
+            <li>Проход по спискам. Бейдж обязателен в зале.</li>
+            <li>Парковка и схема прохода — в подтверждающем письме.</li>
+          </ul>
+          <div class="cta-stripe">
+            <span>Нужен офлайн‑пригласительный PDF?</span>
+            <button class="btn" id="dlInvite">Скачать</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Карта (офлайн)</h3>\n          <div class=\"map\" style=\"display:grid;place-items:center;background:#0a142a;border:1px solid var(--line)\">\n            <div style=\"padding:10px;color:var(--muted);text-align:center\">\n              В офлайн‑режиме интерактивная карта недоступна.\n              <div style=\"margin-top:6px;color:var(--ink)\"><strong>Адрес:</strong> Дом Правительства МО, г. Красногорск, БЦ «Новатор», 7 этаж, конференц‑зал</div>\n            </div>\n          </div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:16px">
+        <h3>FAQ</h3>
+        <details><summary>Кто может участвовать?</summary><p>Врач КДЛ, главная медсестра, старший лаборант/фельдшер от ЛПУ Московской области.</p></details>
+        <details><summary>Будут ли материалы?</summary><p>Презентации и итоги направим на e‑mail участникам после события.</p></details>
+        <details><summary>Можно ли изменить состав участников?</summary><p>Сообщите организаторам заранее — мы обновим список прохода.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="grid2">
+        <div>
+          <strong>Организаторы</strong>
+          <p class="section-note">Министерство здравоохранения Московской области<br>ГКУ МО «Центр внедрения изменений…»</p>
+        </div>
+        <div>
+          <strong>Контакты</strong>
+          <p class="section-note">E‑mail: info@example.ru • Тел.: +7 (000) 000‑00‑00</p>
+        </div>
+      </div>
+      <p class="section-note">© 2025</p>
+    </div>
+  </footer>
+
+  <!-- RSVP MODAL (без Google Forms) -->
+  <div class="modal-backdrop" id="modalRSVP" role="dialog" aria-modal="true" aria-labelledby="rsvpTitle">
+    <div class="modal">
+      <h3 id="rsvpTitle">Заявка на участие</h3>
+      <p class="section-note">Форма отправит письмо через ваш почтовый клиент. Никаких внешних форм.</p>
+      <div class="row">
+        <div class="field"><label>ФИО</label><input id="fName" placeholder="Иванов Иван Иванович" required></div>
+        <div class="field"><label>Роль</label>
+          <select id="fRole">
+            <option>Врач КДЛ</option>
+            <option>Главная медсестра</option>
+            <option>Старший лаборант/фельдшер</option>
+            <option>Иное</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Организация</label><input id="fOrg" placeholder="ГБУЗ МО «…»"></div>
+        <div class="field"><label>E‑mail</label><input id="fMail" type="email" placeholder="you@example.ru" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Телефон</label><input id="fPhone" placeholder="+7 ___ ___‑__‑__"></div>
+        <div class="field"><label>Комментарии</label><input id="fNote" placeholder="Состав делегации / вопросы"></div>
+      </div>
+      <div class="modal-actions">
+        <button class="btn" id="closeRSVP">Отмена</button>
+        <button class="btn btn-primary" id="sendRSVP">Отправить заявку</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth anchor
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{const id=a.getAttribute('href'); if(id.length<2)return; const el=document.querySelector(id); if(!el)return; e.preventDefault(); el.scrollIntoView({behavior:'smooth'});});
+    });
+
+    // Sticky progress
+    const bar=document.getElementById('progress');
+    window.addEventListener('scroll',()=>{const h=document.documentElement; const sc=h.scrollTop; const max=h.scrollHeight-h.clientHeight; bar.style.width=((sc/max)*100)+'%';});
+
+    // Countdown to 25 Sep 2025 11:00 (Europe/Moscow ~ UTC+3)
+    const target=new Date('2025-09-25T08:00:00Z'); // 11:00 MSK ≈ 08:00 UTC
+    function tick(){
+      const now=new Date(); const diff=target-now; if(diff<=0){['cd-d','cd-h','cd-m','cd-s'].forEach(id=>document.getElementById(id).textContent='00'); return;}
+      const s=Math.floor(diff/1000); const d=Math.floor(s/86400); const h=Math.floor((s%86400)/3600); const m=Math.floor((s%3600)/60); const sec=s%60;
+      document.getElementById('cd-d').textContent=String(d).padStart(2,'0');
+      document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+      document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
+      document.getElementById('cd-s').textContent=String(sec).padStart(2,'0');
+    }
+    tick(); setInterval(tick,1000);
+
+    // Program tabs filter
+    const tabs=document.querySelectorAll('.tab');
+    const slots=[...document.querySelectorAll('.slot')];
+    tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active')); t.classList.add('active'); const tag=t.dataset.tag; slots.forEach(s=>{ if(tag==='all'){s.style.display='block'} else { const tags=s.dataset.tags.split(' '); s.style.display=tags.includes(tag)?'block':'none'; } }); }));
+
+    // RSVP modal
+    const modal=document.getElementById('modalRSVP');
+    const openBtns=['openRSVP','openRSVP2','openRSVP3'].map(id=>document.getElementById(id));
+    openBtns.forEach(b=>b&&b.addEventListener('click',()=>{modal.style.display='flex'}));
+    document.getElementById('closeRSVP').addEventListener('click',()=>{modal.style.display='none'});
+    modal.addEventListener('click',e=>{if(e.target===modal) modal.style.display='none'});
+
+    function encodeRFC3986URIComponent(str){return encodeURIComponent(str).replace(/[!'()*]/g,c=>'%'+c.charCodeAt(0).toString(16).toUpperCase());}
+
+    document.getElementById('sendRSVP').addEventListener('click',()=>{
+      const name=document.getElementById('fName').value.trim();
+      const role=document.getElementById('fRole').value;
+      const org=document.getElementById('fOrg').value.trim();
+      const mail=document.getElementById('fMail').value.trim();
+      const phone=document.getElementById('fPhone').value.trim();
+      const note=document.getElementById('fNote').value.trim();
+      if(!name||!mail){alert('Укажите ФИО и e‑mail.'); return;}
+      const to='info@example.ru';
+      const subject=`Заявка на участие — ${name}`;
+      const body=`ФИО: ${name}%0D%0AРоль: ${role}%0D%0AОрганизация: ${org}%0D%0AE‑mail: ${mail}%0D%0AТелефон: ${phone}%0D%0AКомментарии: ${note}%0D%0A%0D%0AИсточник: сайт конференции`;
+      const href=`mailto:${to}?subject=${encodeRFC3986URIComponent(subject)}&body=${body}`;
+      window.location.href=href; modal.style.display='none';
+    });
+
+    // Add to Calendar (.ics)
+    function downloadICS(){
+      const dtStart='20250925T080000Z'; // 11:00 MSK
+      const dtEnd='20250925T150000Z'; // 18:00 MSK
+      const ics=`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Conference//LabMed MO//RU
+BEGIN:VEVENT
+UID:${Date.now()}@labmed-mo
+DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').split('.')[0]}Z
+DTSTART:${dtStart}
+DTEND:${dtEnd}
+SUMMARY:Лабораторная медицина Подмосковья: этапы, инновации, перспективы
+LOCATION:Дом Правительства МО, Красногорск, БЦ «Новатор», 7 эт.
+DESCRIPTION:Официальная конференция Московской области
+END:VEVENT
+END:VCALENDAR`;
+      const blob=new Blob([ics],{type:'text/calendar;charset=utf-8'});
+      const url=URL.createObjectURL(blob); const a=document.createElement('a'); a.href=url; a.download='LabMed_MO_2025-09-25.ics'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+    document.getElementById('addToCal').addEventListener('click',downloadICS);
+
+    // Download simple invite PDF (generated as text -> print dialog)
+    document.getElementById('dlInvite').addEventListener('click',()=>{
+      const w=window.open('','_blank');
+      w.document.write(`<html><head><title>Приглашение</title></head><body style="font-family:Manrope,Arial; line-height:1.5; padding:24px">`+
+        `<h2>Лабораторная медицина Подмосковья</h2>`+
+        `<p><strong>Дата:</strong> 25 сентября 2025 (четверг), 11:00–18:00<br>`+
+        `<strong>Место:</strong> Дом Правительства МО, г. Красногорск, БЦ «Новатор», 7 этаж, конференц‑зал</p>`+
+        `<p>Подтвердите участие ответом на это письмо или через кнопку RSVP на сайте.</p>`+
+        `</body></html>`);
+      w.document.close(); w.focus(); w.print();
+    });
+
+    // Canvas particles — простая анимация для вовлечения
+    const canvas=document.getElementById('heroCanvas');
+    const ctx=canvas.getContext('2d');
+    let w=canvas.width, h=canvas.height;
+    let mouse={x:w/2,y:h/2};
+    const particles=Array.from({length:120},()=>({x:Math.random()*w, y:Math.random()*h, vx:(Math.random()-0.5)*0.6, vy:(Math.random()-0.5)*0.6}));
+    canvas.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect(); mouse.x=e.clientX-r.left; mouse.y=e.clientY-r.top;});
+    function step(){
+      ctx.fillStyle='#0a142a'; ctx.fillRect(0,0,w,h);
+      particles.forEach(p=>{
+        const dx=mouse.x-p.x, dy=mouse.y-p.y; const d=Math.hypot(dx,dy)+0.001; const force=40/(d*d);
+        p.vx+=force*dx; p.vy+=force*dy; p.vx*=0.96; p.vy*=0.96; p.x+=p.vx*0.02; p.y+=p.vy*0.02;
+        if(p.x<0||p.x>w) p.vx*=-1; if(p.y<0||p.y>h) p.vy*=-1;
+        ctx.fillStyle='rgba(96,165,250,0.9)'; ctx.fillRect(p.x,p.y,1.5,1.5);
+      });
+      requestAnimationFrame(step);
+    }
+    step();
+    window.addEventListener('resize',()=>{const r=canvas.getBoundingClientRect(); canvas.width=r.width*devicePixelRatio; canvas.height=r.height*devicePixelRatio; w=canvas.width; h=canvas.height;});
+  </script>
+</body>
+</html>
