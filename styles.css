@@ -414,15 +414,21 @@ section {
 }
 
 .speaker-details {
-  display: none; /* будет управляться JS */
-  margin-top: 16px;
+  display: none;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 0 0 22px;
+  padding: 0;
+  transition: all 0.4s ease-out;
+}
+
+.speaker-details.active {
+  display: block;
+  opacity: 1;
+  max-height: 200px;
+  margin: 16px 0 0;
   padding: 16px;
-  background: rgba(11, 19, 38, 0.5);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  color: var(--ink);
-  font-size: 14px;
-  line-height: 1.5;
 }
 
 .speaker-card-inline {
