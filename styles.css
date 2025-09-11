@@ -434,10 +434,11 @@ section {
 .avatar-sm {
   width: 60px;
   height: 60px;
-  border-radius: 12px;
+  border-radius: 50%; /* Круглый */
   object-fit: cover;
-  border: 1px solid var(--line);
+  border: 2px solid var(--accent);
   flex-shrink: 0;
+  background: #0b1326;
 }
 
 .speaker-role {
