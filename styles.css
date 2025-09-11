@@ -414,7 +414,7 @@ section {
 }
 
 .speaker-details {
-  display: none;
+  display: none; /* будет управляться JS */
   margin-top: 16px;
   padding: 16px;
   background: rgba(11, 19, 38, 0.5);
