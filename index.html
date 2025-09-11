@@ -152,65 +152,102 @@
   </section>
 
   <!-- Секция: Программа -->
-  <section id="program">
-    <div class="container">
-      <h2 class="section-title">Программа</h2>
-      <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
-        Интерактивный таймлайн с докладами, кофе-брейками и возможностью неформального общения.
-      </p>
-      
-      <div class="timeline" id="timeline">
-        <div class="slot" data-tags="организация">
-          <h4><span class="time">11:00–12:00</span> — Регистрация и приветственный кофе</h4>
-        </div>
+  <!-- Секция: Программа -->
+<section id="program">
+  <div class="container">
+    <h2 class="section-title">Программа</h2>
+    <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
+      Чёткий тайминг, ключевые темы и возможность неформального общения.
+    </p>
 
-        <div class="slot" data-tags="организация">
-          <h4><span class="time">12:00–12:30</span> — Открытие конференции</h4>
-          <details>
-            <summary>Спикеры</summary>
-            <ul>
-              <li><strong>Максим Забелин</strong> — Министр здравоохранения МО</li>
-              <li><strong>Михаил Годков</strong> — РМАНПО, врач НИИ им. Склифосовского</li>
-              <li><strong>Андрей Иванов</strong> — Президент ФЛМ, член-корр. РАН</li>
-            </ul>
-          </details>
-        </div>
+    <div class="timeline" id="timeline">
 
-        <div class="slot" data-tags="организация ит процессы качество">
-          <h4><span class="time">12:30–15:00</span> — Сессия «Лабораторная служба Московской области»</h4>
-          <details open>
-            <summary>Доклады:</summary>
-            <ol style="margin: 8px 0; padding-left: 20px;">
-              <li><strong>Централизация</strong> — И.В. Щеблыкина‑Монастырёва</li>
-              <li><strong>Стандартизация проб</strong> — О.А. Косенко</li>
-              <li><strong>Логистика</strong> — М.С. Извекова</li>
-              <li><strong>ЛИС и интеграция</strong> — Е.Е. Житкова</li>
-              <li><strong>Цитология</strong> — Ж.И. Вострикова</li>
-              <li><strong>Качество и возврат проб</strong> — Е.А. Тен</li>
-            </ol>
-          </details>
-        </div>
-
-        <div class="slot" data-tags="организация">
-          <h4><span class="time">15:00–15:30</span> — Кофе-брейк</h4>
-        </div>
-
-        <div class="slot" data-tags="качество ит организация">
-          <h4><span class="time">15:30–16:00</span> — Приглашённые эксперты</h4>
-          <div class="section-note">Выступление федеральных экспертов. Информация уточняется.</div>
-        </div>
-
-        <div class="slot" data-tags="организация">
-          <h4><span class="time">16:00–16:10</span> — Закрытие</h4>
-          <div class="more">Подведение итогов.</div>
-        </div>
-
-        <div class="slot" data-tags="организация">
-          <h4><span class="time">16:10–18:00</span> — Фуршет и нетворкинг</h4>
-        </div>
+      <div class="slot" data-tags="организация">
+        <h4><span class="time">11:00–12:00</span> — Регистрация участников</h4>
       </div>
+
+      <div class="slot" data-tags="открытие">
+        <h4><span class="time">12:00–12:30</span> — Открытие конференции</h4>
+        <div class="section-note">Приветственное слово организаторов и гостей</div>
+      </div>
+
+      <div class="slot" data-tags="центр">
+        <h4><span class="time">12:30–12:45</span> — Централизация лабораторной службы Московской области</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>И.В. Щеблыкина-Монастырёва</strong><br>
+          Главный внештатный специалист по КЛД МЗ МО</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="стандарты">
+        <h4><span class="time">12:45–13:00</span> — Стандартизация взятия и маркировки проб</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>О.А. Косенко</strong><br>
+          Зав. КДЛ, ГБУЗ МО «Балашихинская больница»</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="логистика">
+        <h4><span class="time">13:00–13:15</span> — Маршрутизация биоматериала</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>М.С. Извекова</strong><br>
+          Руководитель службы диагностики, ГБУЗ МО «Истринская КБ»</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="процессы">
+        <h4><span class="time">13:15–13:30</span> — Регистрация биоматериала в лаборатории</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>Е.Е. Житкова</strong><br>
+          Зав. КДЛ, ГБУЗ МО «Одинцовская ОКБ»</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="цитология">
+        <h4><span class="time">13:30–13:45</span> — Цитологическая диагностика</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>Ж.И. Вострикова</strong><br>
+          Эксперт ФФОМС, EFLM, NATH</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="качество">
+        <h4><span class="time">13:45–14:00</span> — Обработка несоответствий и политика возврата или утилизации проб</h4>
+        <details open>
+          <summary>Спикер</summary>
+          <p><strong>Е.А. Тен</strong><br>
+          Зав. КДЛ, ГБУЗ МО «Домодедовская больница»</p>
+        </details>
+      </div>
+
+      <div class="slot" data-tags="перерыв">
+        <h4><span class="time">14:00–15:00</span> — Перерыв</h4>
+        <div class="section-note">Обед и свободное время</div>
+      </div>
+
+      <div class="slot" data-tags="пленарка">
+        <h4><span class="time">15:00–16:30</span> — Пленарное заседание</h4>
+        <div class="section-note">Выступления приглашённых экспертов и дискуссия</div>
+      </div>
+
+      <div class="slot" data-tags="закрытие">
+        <h4><span class="time">16:30–16:45</span> — Окончание конференции</h4>
+        <div class="more">Подведение итогов.</div>
+      </div>
+
+      <div class="slot" data-tags="нетворкинг">
+        <h4><span class="time">16:45–18:00</span> — Неформальное общение</h4>
+        <div class="section-note">Фуршет и нетворкинг с коллегами</div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Секция: Эксперты -->
   <!-- Секция: Ключевые участники -->
