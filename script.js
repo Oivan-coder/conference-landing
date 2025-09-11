@@ -1,47 +1,53 @@
-// === 1. Плавная прокрутка к якорям ===
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    const id = anchor.getAttribute('href');
-    if (id.length < 2) return;
-    const el = document.querySelector(id);
-    if (!el) return;
-    e.preventDefault();
-    el.scrollIntoView({ behavior: 'smooth' });
+document.addEventListener('DOMContentLoaded', function() {
+
+  // === 1. Плавная прокрутка к якорям ===
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const id = anchor.getAttribute('href');
+      if (id.length < 2) return;
+      const el = document.querySelector(id);
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth' });
+    });
   });
-});
 
-// === 2. Прогресс-бар прокрутки ===
-const bar = document.getElementById('progress');
-window.addEventListener('scroll', () => {
-  const h = document.documentElement;
-  const scrollTop = h.scrollTop;
-  const maxScroll = h.scrollHeight - h.clientHeight;
-  const progress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
-  bar.style.width = progress + '%';
-});
+  // === 2. Прогресс-бар прокрутки ===
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrollTop = h.scrollTop;
+    const maxScroll = h.scrollHeight - h.clientHeight;
+    const progress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
+    bar.style.width = progress + '%';
+  });
 
-// === 3. Таймер до события ===
-const target = new Date('2025-09-25T08:00:00Z'); // 11:00 MSK
-function tick() {
-  const now = new Date();
-  const diff = target - now;
-  if (diff <= 0) {
-    ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => document.getElementById(id).textContent = '00');
-    return;
+  // === 3. Таймер до события ===
+  const target = new Date('2025-09-25T08:00:00Z'); // 11:00 MSK (UTC+3)
+  function tick() {
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) {
+      ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = '00';
+      });
+      return;
+    }
+    const s = Math.floor(diff / 1000);
+    const d = Math.floor(s / 86400);
+    const h = Math.floor((s % 86400) / 3600);
+    const m = Math.floor((s % 3600) / 60);
+    const sec = s % 60;
+
+    document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
+    document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
+    document.getElementById('cd-s').textContent = String(sec).padStart(2, '0');
   }
-  const s = Math.floor(diff / 1000);
-  const d = Math.floor(s / 86400);
-  const h = Math.floor((s % 86400) / 3600);
-  const m = Math.floor((s % 3600) / 60);
-  const sec = s % 60;
 
-  document.getElementById('cd-d').textContent = String(d).padStart(2, '0');
-  document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
-  document.getElementById('cd-s').textContent = String(sec).padStart(2, '0');
-}
-tick();
-setInterval(tick, 1000);
+  tick();
+  setInterval(tick, 1000);
 
 // === 4. Фильтрация программы по трекам ===
 const tabs = document.querySelectorAll('.tab');
