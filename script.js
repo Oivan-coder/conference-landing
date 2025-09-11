@@ -11,7 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
       el.scrollIntoView({ behavior: 'smooth' });
     });
   });
+// === X. Управление видимостью спикеров ===
+document.querySelectorAll('.speaker-toggle').forEach(button => {
+  button.addEventListener('click', function () {
+    const details = this.closest('.slot').querySelector('.speaker-details');
+    const isVisible = details.style.display === 'block';
 
+    // Поворачиваем плюсик
+    this.classList.toggle('active', !isVisible);
+
+    // Показываем/скрываем
+    details.style.display = isVisible ? 'none' : 'block';
+  });
+});
+
+// Скрыть все блоки по умолчанию
+document.querySelectorAll('.speaker-details').forEach(el => {
+  el.style.display = 'none';
+});
   // === 2. Прогресс-бар прокрутки ===
   const bar = document.getElementById('progress');
   window.addEventListener('scroll', () => {
