@@ -165,15 +165,4 @@ if (canvas) {
     h = canvas.height;
   });
 }
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Обработка кликов по кнопкам спикеров
-  document.querySelectorAll('.speaker-toggle').forEach(button => {
-    button.addEventListener('click', function() {
-      const details = this.closest('.slot').querySelector('.speaker-details');
-      this.classList.toggle('active');
-      details.classList.toggle('active');
-    });
-  });
-});
-</script>
+
