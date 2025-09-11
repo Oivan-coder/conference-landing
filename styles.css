@@ -20,7 +20,53 @@ footer {
   background: rgba(11, 18, 32, 0.6);
   backdrop-filter: blur(10px);
 }
+/* === Speaker Inline Card === */
+.speaker-details {
+  margin-top: 12px;
+}
 
+.speaker-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--accent);
+  transition: opacity 0.2s;
+}
+
+.speaker-details summary:hover {
+  opacity: 0.9;
+}
+
+.speaker-details[open] summary {
+  border-bottom-style: solid;
+}
+
+.speaker-card-inline {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease;
+}
+
+.avatar-sm {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
