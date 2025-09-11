@@ -223,169 +223,127 @@
   <!-- Секция: Эксперты -->
   <!-- Секция: Ключевые участники -->
 <section id="participants">
-  <div class="container">
+    <div class="container">
+      <!-- Эксперты -->
+      <div style="margin-bottom: 60px;">
+        <h2 class="section-title">Приглашённые эксперты</h2>
+        <p class="section-note">
+          Ведущие специалисты России — федеральный уровень
+        </p>
 
-    <!-- Эксперты -->
-    <div>
-      <h2 class="section-title">Приглашённые эксперты</h2>
-      <p class="section-note">
-        Ведущие специалисты России — федеральный уровень.
-      </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Годков М.А.</h4>
+            <div class="badge-sm">РМАНПО</div>
+            <p class="section-note" style="margin: 12px 0 0;">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
+          </div>
 
-      <div class="cards-grid">
-        <div class="expert-card">
-          <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-lg">
-          <h4>Годков М.А.</h4>
-          <div class="badge-sm">РМАНПО</div>
-          <p class="section-note">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Иванов А.М.</h4>
+            <div class="badge-sm">ФЛМ, РАН</div>
+            <p class="section-note" style="margin: 12px 0 0;">Президент ФЛМ, профессор, член-корр. РАН</p>
+          </div>
+
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/experts/priputnevich.jpg" alt="Татьяна Припутневич" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Припутневич Т.В.</h4>
+            <div class="badge-sm">НМИЦ АГиП</div>
+            <p class="section-note" style="margin: 12px 0 0;">Главный внештатный микробиолог Минздрава РФ</p>
+          </div>
+
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/experts/voronkov.jpg" alt="Алексей Воронков" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Воронков А.А.</h4>
+            <div class="badge-sm">Волгоград</div>
+            <p class="section-note" style="margin: 12px 0 0;">Главврач по КЛД, директор медцентра</p>
+          </div>
         </div>
 
-        <div class="expert-card">
-          <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-lg">
-          <h4>Иванов А.М.</h4>
-          <div class="badge-sm">ФЛМ, РАН</div>
-          <p class="section-note">Президент ФЛМ, профессор, член-корр. РАН</p>
+        <div style="text-align: center; margin-top: 32px;">
+          <button class="btn btn-outline" onclick="showAllExperts()">Показать всех экспертов</button>
         </div>
+      </div>
 
-        <div class="expert-card">
-          <img src="img/experts/priputnevich.jpg" alt="Татьяна Припутневич" class="avatar-lg">
-          <h4>Припутневич Т.В.</h4>
-          <div class="badge-sm">НМИЦ АГиП</div>
-          <p class="section-note">Главный внештатный микробиолог Минздрава РФ</p>
-        </div>
+      <!-- Спикеры -->
+      <div>
+        <h2 class="section-title">Спикеры конференции</h2>
+        <p class="section-note">
+          Ведущие специалисты лабораторной службы Московской области
+        </p>
 
-        <div class="expert-card">
-          <img src="img/experts/voronkov.jpg" alt="Алексей Воронков" class="avatar-lg">
-          <h4>Воронков А.А.</h4>
-          <div class="badge-sm">Волгоград</div>
-          <p class="section-note">Главврач по КЛД, директор медцентра</p>
-        </div>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/speakers/sheblykina.jpg" alt="Щеблыкина-Монастырёва" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Щеблыкина-Монастырёва И.В.</h4>
+            <div class="badge-sm">Централизация</div>
+            <p class="section-note" style="margin: 12px 0 0;">Главный внештатный специалист по КЛД МЗ МО</p>
+          </div>
 
-        <div class="expert-card">
-          <img src="img/experts/lambakakhar.jpg" alt="Мария Ламбакахар" class="avatar-lg">
-          <h4>Ламбакахар М.Г.</h4>
-          <div class="badge-sm">РМАНПО</div>
-          <p class="section-note">К.м.н., доцент кафедры КЛД</p>
-        </div>
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/speakers/kosenko.jpg" alt="О.А. Косенко" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Косенко О.А.</h4>
+            <div class="badge-sm">Стандартизация</div>
+            <p class="section-note" style="margin: 12px 0 0;">Зав. КДЛ, Балашихинская больница</p>
+          </div>
 
-        <div class="expert-card">
-          <img src="img/experts/kalacheva.jpg" alt="Ольга Калачева" class="avatar-lg">
-          <h4>Калачева О.С.</h4>
-          <div class="badge-sm">МЕДСИ</div>
-          <p class="section-note">Руководитель единой КДЛ ГК «МЕДСИ»</p>
-        </div>
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/speakers/izvekova.jpg" alt="М.С. Извекова" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Извекова М.С.</h4>
+            <div class="badge-sm">Логистика</div>
+            <p class="section-note" style="margin: 12px 0 0;">Руководитель службы диагностики, Истра</p>
+          </div>
 
-        <div class="expert-card">
-          <img src="img/experts/sunzova.jpg" alt="Инна Сунцова" class="avatar-lg">
-          <h4>Сунцова И.Г.</h4>
-          <div class="badge-sm">ФЛМ, МО</div>
-          <p class="section-note">Председатель Регкомитета ФЛМ по МО</p>
-        </div>
-
-        <div class="expert-card">
-          <img src="img/experts/shatokhina.jpg" alt="Светлана Шатохина" class="avatar-lg">
-          <h4>Шатохина С.Н.</h4>
-          <div class="badge-sm">МОНИКИ</div>
-          <p class="section-note">Профессор, зав. кафедрой КЛД МОНИКИ</p>
-        </div>
-
-        <div class="expert-card">
-          <img src="img/experts/kudryavtseva.jpg" alt="Лариса Кудрявцева" class="avatar-lg">
-          <h4>Кудрявцева Л.В.</h4>
-          <div class="badge-sm">7 ЛЦ МНПЦЛИ</div>
-          <p class="section-note">Зав. лабораторией КДЛ 7 Лабораторного центра</p>
+          <div class="card-panel" style="text-align: center; padding: 24px;">
+            <img src="img/speakers/zhitkova.jpg" alt="Е.Е. Житкова" class="avatar-lg">
+            <h4 style="margin: 16px 0 8px; color: var(--accent);">Житкова Е.Е.</h4>
+            <div class="badge-sm">ЛИС / IT</div>
+            <p class="section-note" style="margin: 12px 0 0;">Зав. КДЛ, Одинцовская ОКБ</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Спикеры -->
-    <div style="margin-top: 60px;">
-      <h2 class="section-title">Спикеры конференции</h2>
-      <p class="section-note">
-        Ведущие специалисты лабораторной службы Московской области.
-      </p>
-
-      <div class="cards-grid">
-        <div class="speaker-card">
-          <img src="img/speakers/sheblykina.jpg" alt="Щеблыкина-Монастырёва" class="avatar-lg">
-          <h4>Щеблыкина-Монастырёва И.В.</h4>
-          <div class="badge-sm">Централизация</div>
-          <p class="section-note">Главный внештатный специалист по КЛД МЗ МО</p>
-        </div>
-
-        <div class="speaker-card">
-          <img src="img/speakers/kosenko.jpg" alt="О.А. Косенко" class="avatar-lg">
-          <h4>Косенко О.А.</h4>
-          <div class="badge-sm">Стандартизация</div>
-          <p class="section-note">Зав. КДЛ, Балашихинская больница</p>
-        </div>
-
-        <div class="speaker-card">
-          <img src="img/speakers/izvekova.jpg" alt="М.С. Извекова" class="avatar-lg">
-          <h4>Извекова М.С.</h4>
-          <div class="badge-sm">Логистика</div>
-          <p class="section-note">Руководитель службы диагностики, Истра</p>
-        </div>
-
-        <div class="speaker-card">
-          <img src="img/speakers/zhitkova.jpg" alt="Е.Е. Житкова" class="avatar-lg">
-          <h4>Житкова Е.Е.</h4>
-          <div class="badge-sm">ЛИС / IT</div>
-          <p class="section-note">Зав. КДЛ, Одинцовская ОКБ</p>
-        </div>
-
-        <div class="speaker-card">
-          <img src="img/speakers/vostrikova.jpg" alt="Ж.И. Вострикова" class="avatar-lg">
-          <h4>Вострикова Ж.И.</h4>
-          <div class="badge-sm">Цитология</div>
-          <p class="section-note">Эксперт ФФОМС, EFLM, NATH</p>
-        </div>
-
-        <div class="speaker-card">
-          <img src="img/speakers/ten.jpg" alt="Е.А. Тен" class="avatar-lg">
-          <h4>Тен Е.А.</h4>
-          <div class="badge-sm">Качество</div>
-          <p class="section-note">Зав. КДЛ, Домодедовская больница</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- Секция: Информация для гостей -->
   <section id="info">
     <div class="container">
       <h2 class="section-title">Информация для гостей</h2>
 
-      <div class="grid2 gap-24" style="margin-bottom: 32px;">
-        <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="font-size: 24px;">📍</div>
-            <h3 style="color: var(--accent); margin: 0;">Проход и площадка</h3>
+      <!-- Верхний ряд: Проход и площадка + Карта -->
+      <div class="grid2 gap-24" style="margin-bottom: 40px;">
+        <!-- Левый блок: Проход и площадка + Удобства -->
+        <div>
+          <div class="card-panel" style="margin-bottom: 24px;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <div style="font-size: 24px;">📍</div>
+              <h3 style="color: var(--accent); margin: 0;">Проход и площадка</h3>
+            </div>
+            <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
+              <li><strong>Регистрация:</strong> с 11:00, 7 этаж</li>
+              <li><strong>Проход:</strong> по спискам, бейдж обязателен</li>
+              <li><strong>Документ:</strong> паспорт РФ</li>
+              <li><strong>Парковка:</strong> по предварительной заявке</li>
+            </ul>
           </div>
-          <ul style="padding-left: 20px; line-height: 1.6;">
-            <li><strong>Регистрация:</strong> с 11:00, 7 этаж</li>
-            <li><strong>Проход:</strong> по спискам, бейдж обязателен</li>
-            <li><strong>Документ:</strong> паспорт РФ</li>
-            <li><strong>Парковка:</strong> по предварительной заявке</li>
-          </ul>
+
+          <div class="card-panel">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+              <div style="font-size: 24px;">🍽️</div>
+              <h3 style="color: var(--accent); margin: 0;">Удобства</h3>
+            </div>
+            <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
+              <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
+              <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
+              <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="font-size: 24px;">🍽️</div>
-            <h3 style="color: var(--accent); margin: 0;">Удобства</h3>
-          </div>
-          <ul style="padding-left: 20px; line-height: 1.6;">
-            <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
-            <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
-            <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="grid2 gap-24" style="margin-bottom: 32px;">
-        <div class="card-panel">
+        <!-- Правый блок: Карта -->
+        <div class="card-panel" style="height: fit-content;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
             <div style="font-size: 24px;">🗺️</div>
             <h3 style="color: var(--accent); margin: 0;">Как добраться</h3>
@@ -395,39 +353,40 @@
             alt="Карта: БЦ «Новатор», Красногорск" 
             style="
               width: 100%;
-              height: 200px;
+              height: 300px;
               object-fit: cover;
               border-radius: 12px;
               border: 1px solid var(--line);
-              margin-bottom: 12px;
+              margin-bottom: 16px;
             "
           >
-          <p class="section-note" style="text-align: center; margin: 0; font-size: 0.95em;">
+          <p class="section-note" style="text-align: center; margin: 0;">
             Дом Правительства МО, БЦ «Новатор», Красногорск
           </p>
         </div>
+      </div>
 
+      <!-- Нижний ряд: FAQ по центру -->
+      <div style="max-width: 800px; margin: 0 auto;">
         <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; justify-content: center;">
             <div style="font-size: 24px;">❓</div>
-            <h3 style="color: var(--accent); margin: 0;">Частые вопросы</h3>
+            <h3 style="color: var(--accent); margin: 0; text-align: center;">Частые вопросы</h3>
           </div>
           
-          <div style="margin-top: 16px;">
-            <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line);">
-              <h4 style="color: var(--ink); margin: 0 0 8px 0; font-size: 1em;">Кто может участвовать?</h4>
-              <p style="color: var(--muted); margin: 0; font-size: 0.95em;">Врачи КДЛ, медсестры, лаборанты из ЛПУ Московской области.</p>
-            </div>
-            
-            <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--line);">
-              <h4 style="color: var(--ink); margin: 0 0 8px 0; font-size: 1em;">Будут ли материалы после?</h4>
-              <p style="color: var(--muted); margin: 0; font-size: 0.95em;">Да, презентации и итоги пришлем участникам на email.</p>
-            </div>
-            
-            <div>
-              <h4 style="color: var(--ink); margin: 0 0 8px 0; font-size: 1em;">Можно ли заменить участника?</h4>
-              <p style="color: var(--muted); margin: 0; font-size: 0.95em;">Да, сообщите заранее — обновим список прохода.</p>
-            </div>
+          <div style="max-width: 600px; margin: 0 auto;">
+            <details>
+              <summary>Кто может участвовать?</summary>
+              <p>Врачи КДЛ, медсестры, лаборанты из ЛПУ Московской области.</p>
+            </details>
+            <details>
+              <summary>Будут ли материалы после?</summary>
+              <p>Да, презентации и итоги пришлем участникам на email.</p>
+            </details>
+            <details>
+              <summary>Можно ли заменить участника?</summary>
+              <p>Да, сообщите заранее — обновим список прохода.</p>
+            </details>
           </div>
         </div>
       </div>
