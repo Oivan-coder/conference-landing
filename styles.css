@@ -21,16 +21,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px; /* Чтобы при прокрутке заголовок не скрывался под навбаром */
 }
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 body {
   margin: 0;
   padding: 0;
@@ -424,20 +415,14 @@ section {
 
 .speaker-details {
   display: none;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin: 0 0 0 22px;
-  padding: 0;
-  transition: all 0.4s ease-out;
-}
-
-.speaker-details.active {
-  display: block;
-  opacity: 1;
-  max-height: 200px;
-  margin: 16px 0 0;
+  margin-top: 16px;
   padding: 16px;
+  background: rgba(11, 19, 38, 0.5);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .speaker-card-inline {
@@ -449,11 +434,10 @@ section {
 .avatar-sm {
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Круглый */
+  border-radius: 12px;
   object-fit: cover;
-  border: 2px solid var(--accent);
+  border: 1px solid var(--line);
   flex-shrink: 0;
-  background: #0b1326;
 }
 
 .speaker-role {
