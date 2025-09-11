@@ -62,15 +62,22 @@ document.addEventListener('DOMContentLoaded', function () {
   // === 4. Кнопки "Спикер" в программе — показ/скрытие карточки ===
   // Сначала скрываем все блоки с информацией
   // === 4. Кнопки "Спикер" — плавное раскрытие карточки ===
+  // Скрыть все блоки с информацией о спикерах по умолчанию
+  document.querySelectorAll('.speaker-details').forEach(el => {
+    el.style.display = 'none';
+  });
+
+// Обработка кликов по кнопкам "плюс"
   document.querySelectorAll('.speaker-toggle').forEach(button => {
     button.addEventListener('click', function () {
       const details = this.closest('.slot').querySelector('.speaker-details');
-    
-    // Переключаем класс .active для анимации
-      details.classList.toggle('active');
-    
-    // Меняем состояние кнопки (для поворота + → ✕)
-      this.classList.toggle('active');
+      const isVisible = details.style.display === 'block';
+
+    // Показываем или скрываем
+      details.style.display = isVisible ? 'none' : 'block';
+
+    // Меняем состояние кнопки (для поворота плюса)
+      this.classList.toggle('active', !isVisible);
     });
   });
 
