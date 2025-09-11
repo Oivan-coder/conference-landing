@@ -47,23 +47,21 @@ setInterval(tick, 1000);
 const tabs = document.querySelectorAll('.tab');
 const slots = [...document.querySelectorAll('.slot')];
 
-if (tabs.length > 0) {
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const tag = tab.dataset.tag;
-      slots.forEach(slot => {
-        if (tag === 'all') {
-          slot.style.display = 'block';
-        } else {
-          const tags = slot.dataset.tags.split(' ');
-          slot.style.display = tags.includes(tag) ? 'block' : 'none';
-        }
-      });
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const tag = tab.dataset.tag;
+    slots.forEach(slot => {
+      if (tag === 'all') {
+        slot.style.display = 'block';
+      } else {
+        const tags = slot.dataset.tags.split(' ');
+        slot.style.display = tags.includes(tag) ? 'block' : 'none';
+      }
     });
   });
-}
+});
 
 // === 5. Анимация появления секций при скролле ===
 const sections = document.querySelectorAll('section');
@@ -161,52 +159,15 @@ if (canvas) {
     h = canvas.height;
   });
 }
-
-// === 8. Управление отображением информации о спикерах ===
+<script>
 document.addEventListener('DOMContentLoaded', function() {
   // Обработка кликов по кнопкам спикеров
   document.querySelectorAll('.speaker-toggle').forEach(button => {
     button.addEventListener('click', function() {
       const details = this.closest('.slot').querySelector('.speaker-details');
-      const isOpening = !details.classList.contains('active');
-      
-      // Закрываем все открытые блоки
-      document.querySelectorAll('.speaker-details.active').forEach(item => {
-        if (item !== details) {
-          item.classList.remove('active');
-          const toggleBtn = item.closest('.slot').querySelector('.speaker-toggle');
-          if (toggleBtn) toggleBtn.classList.remove('active');
-        }
-      });
-      
-      // Переключаем текущий блок
       this.classList.toggle('active');
       details.classList.toggle('active');
-      
-      // Плавная прокрутка к открытому блоку
-      if (isOpening) {
-        setTimeout(() => {
-          details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
-      }
-    });
-  });
-
-  // Закрытие блоков со спикерами при клике вне их
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.slot') && !e.target.closest('.speaker-toggle')) {
-      document.querySelectorAll('.speaker-details.active').forEach(item => {
-        item.classList.remove('active');
-        const toggleBtn = item.closest('.slot').querySelector('.speaker-toggle');
-        if (toggleBtn) toggleBtn.classList.remove('active');
-      });
-    }
-  });
-
-  // Предотвращаем закрытие при клике внутри блока спикера
-  document.querySelectorAll('.speaker-details').forEach(details => {
-    details.addEventListener('click', function(e) {
-      e.stopPropagation();
     });
   });
 });
+</script>
