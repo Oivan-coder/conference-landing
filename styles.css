@@ -564,3 +564,172 @@ footer p {
     justify-content: center;
   }
 }
+/* Стили для программы */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  opacity: 0.3;
+}
+
+.slot {
+  background: rgba(11, 19, 38, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 20px 20px 48px;
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.slot::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  z-index: 1;
+}
+
+.slot:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.1);
+}
+
+.slot-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.time-badge {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #001018;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.slot h4 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.speaker-toggle {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--accent);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.speaker-toggle:hover {
+  background: rgba(34, 211, 238, 0.1);
+  border-color: var(--accent);
+}
+
+.speaker-toggle.active svg {
+  transform: rotate(45deg);
+}
+
+.slot-description {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+  padding-left: 22px;
+}
+
+.speaker-details {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.speaker-details.active {
+  height: auto;
+  margin-top: 16px;
+}
+
+.speaker-card-inline {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(11, 19, 38, 0.5);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  animation: fadeIn 0.3s ease;
+}
+
+.avatar-sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.speaker-role {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .slot {
+    padding: 16px 16px 16px 40px;
+  }
+  
+  .slot-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .time-badge {
+    align-self: flex-start;
+  }
+  
+  .speaker-card-inline {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}
