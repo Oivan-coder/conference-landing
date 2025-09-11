@@ -12,7 +12,52 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --gap: 24px;
 }
+/* === Footer === */
+footer {
+  padding: 60px 0 40px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  background: rgba(11, 18, 32, 0.6);
+  backdrop-filter: blur(10px);
+}
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-text {
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-divider {
+  height: 1px;
+  background: var(--line);
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.footer-copyright {
+  color: var(--muted);
+  font-size: 0.9em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
 * {
   box-sizing: border-box;
 }
