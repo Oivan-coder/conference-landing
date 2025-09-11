@@ -19,7 +19,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* Чтобы при прокрутке заголовок не скрывался под навбаром */
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -304,6 +304,35 @@ section {
 
 .gap-24 { gap: 24px; }
 
+/* === СЕТКА ДЛЯ ЭКСПЕРТОВ === */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряд */
+  gap: 24px;
+}
+
+/* Аватарки экспертов */
+.avatar-lg {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  margin: 0 auto;
+  display: block;
+}
+
+.badge-sm {
+  display: inline-block;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
 /* === Программа / Timeline === */
 .timeline {
   display: flex;
@@ -414,7 +443,7 @@ section {
 }
 
 .speaker-details {
-  display: none; /* будет управляться JS */
+  display: none;
   margin-top: 16px;
   padding: 16px;
   background: rgba(11, 19, 38, 0.5);
@@ -525,6 +554,12 @@ footer {
 }
 
 /* === Адаптивность === */
+@media (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд на средних экранах */
+  }
+}
+
 @media (max-width: 980px) {
   .hero .grid {
     grid-template-columns: 1fr;
@@ -537,6 +572,10 @@ footer {
 
   .kicker {
     justify-content: center;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд на планшетах */
   }
 }
 
@@ -561,6 +600,10 @@ footer {
     justify-content: center;
   }
 
+  .cards-grid {
+    grid-template-columns: 1fr; /* 1 карточка в ряд на телефонах */
+  }
+
   /* Адаптив для таймлайна */
   .slot {
     padding: 16px 16px 16px 40px;
@@ -583,5 +626,16 @@ footer {
 
   .avatar-sm {
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-lg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .card-panel {
+    padding: 16px;
   }
 }
