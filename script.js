@@ -183,7 +183,28 @@ END:VCALENDAR`;
     animate();
   }
 
+   // === Бургер-меню для мобильных ===
+  const navBurger = document.getElementById('nav-burger');
+  const navLinks = document.getElementById('nav-links');
 
+  if (navBurger && navLinks) {
+    navBurger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    
+    // Блокировка прокрутки тела при открытом меню
+      document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    });
+
+  // Закрытие меню при клике на ссылку
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navBurger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = ''; // Разблокировка прокрутки
+      });
+    });
+  }
   // === 8. ПРОВЕРКА НАЛИЧИЯ ПРЕЗЕНТАЦИЙ И ОТОБРАЖЕНИЕ ССЫЛОК ===
   const presentations = [
     { statusId: "pres-shchiblykina-status", url: "presentations/shchiblykina-centralization.pdf" },
