@@ -394,7 +394,7 @@ section.visible {
   }
 }
 
-/* === Card Panels === */
+/* === Card Panels (общие карточки) === */
 .card-panel {
   background: #0b1326;
   border: 1px solid var(--line);
@@ -435,20 +435,30 @@ section.visible {
 @media (min-width: 768px) {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 16px auto 0;
   }
 }
 
-.card-panel {
+/* Карточка эксперта — отдельный класс, чтобы не конфликтовать с другими card-panel */
+.expert-card {
   background: #0b1326;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 24px;
   transition: var(--transition);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100%;
+}
+
+.expert-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(34, 211, 238, 0.1);
 }
 
 .avatar-lg {
