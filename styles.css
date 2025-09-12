@@ -629,7 +629,7 @@ details summary {
   padding: 8px 0;
 }
 
-/* === FOOTER: Современный стиль в духе Apple === */
+/* === FOOTER: Минималистичный, лого рядом с текстом === */
 .footer {
   padding: 60px 0 40px;
   color: var(--muted);
@@ -638,72 +638,51 @@ details summary {
   backdrop-filter: blur(12px);
 }
 
-.footer-grid {
+/* Сетка: три колонки — каждая пара лого + текст */
+.footer-partners {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  max-width: 720px;
+  gap: 24px;
+  max-width: 800px;
   margin: 0 auto 40px;
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
-  .footer-grid {
+  .footer-partners {
     grid-template-columns: 1fr 1fr 1fr;
-    text-align: left;
-    gap: 24px;
+    gap: 32px;
   }
 }
 
-.footer-col {
+/* Блок: лого + текст рядом */
+.footer-org-pair,
+.footer-contact-pair {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 16px;
 }
 
-@media (min-width: 768px) {
-  .footer-col {
-    align-items: flex-start;
-  }
-}
-
-/* === Логотипы — круглые, с эффектами === */
-.footer-logo-wrapper {
+/* Логотип — квадратный, с тонкой рамкой */
+.footer-logo-square {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 8px;
-  overflow: hidden;
-  border: 2px solid transparent;
-  background-origin: border-box;
-  background-clip: border-box;
-}
-
-.footer-logo-wrapper:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 18px rgba(34, 211, 238, 0.3);
-}
-
-.footer-logo-circle {
-  width: 48px;
-  height: 48px;
   object-fit: contain;
-  filter: brightness(1.1) contrast(1.05);
-  transition: filter 0.3s ease;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: #0b1326;
+  padding: 4px;
 }
 
-.footer-logo-wrapper:hover .footer-logo-circle {
-  filter: brightness(1.2);
+/* Эффект при наведении — чуть ярче рамка и тень */
+.footer-logo-square:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.1);
 }
 
-/* === Текст и метки === */
+/* Подписи */
 .footer-label {
   font-size: 12px;
   letter-spacing: 0.8px;
@@ -719,44 +698,40 @@ details summary {
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
+}
+
+/* === Контакты: иконки слева, текст справа === */
+.footer-contact-pair {
+  align-items: flex-start;
+}
+
+.contact-icon-block {
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--accent);
+  min-width: 24px;
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .footer-text {
-    text-align: left;
-  }
-}
-
-/* === Контакты — кликабельные ссылки === */
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: 6px;
+  gap: 4px;
+  flex: 1;
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   color: var(--muted);
   font-size: 14px;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .contact-link:hover {
   color: var(--accent);
-  transform: translateX(2px);
 }
 
-.contact-icon {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.contact-name {
+.contact-person {
   font-size: 14px;
   color: var(--ink);
   font-weight: 600;
