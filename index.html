@@ -13,6 +13,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Яндекс.Карты API -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -555,32 +558,32 @@
               <h3 style="color: var(--accent); margin: 0;">Удобства</h3>
             </div>
             <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
-              <li><strong>3 этаж:</strong> кафетерий </li>
-              <li><strong>2 этаж:</strong> столовая </li>
-              <strong>Кофе-брейк:</strong> 15:00–15:30 </li>
+              <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
+              <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
+              <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
             </ul>
           </div>
         </div>
 
+        <!-- Интерактивная карта -->
         <div class="card-panel" style="height: fit-content;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
             <div style="font-size: 24px;">🗺️</div>
             <h3 style="color: var(--accent); margin: 0;">Как добраться</h3>
           </div>
-          <img 
-            src="img/map-screenshot.jpg" 
-            alt="Карта: БЦ «Новатор», Красногорск" 
-            style="
-              width: 100%;
-              height: 300px;
-              object-fit: cover;
-              border-radius: 12px;
-              border: 1px solid var(--line);
-              margin-bottom: 16px;
-            "
-          >
+
+          <!-- Контейнер карты -->
+          <div id="yandex-map" style="
+            width: 100%;
+            height: 300px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: #0b1326;
+            margin-bottom: 16px;
+          "></div>
+
           <p class="section-note" style="text-align: center; margin: 0;">
-            Дом Правительства МО, БЦ «Новатор», Красногорск
+            Дом Правительства МО, БЦ «Новатор», г. Красногорск
           </p>
         </div>
       </div>
