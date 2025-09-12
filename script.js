@@ -60,30 +60,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // === 4. Кнопки "Спикер" в программе — показ/скрытие карточки ===
-// Сначала скрываем все блоки с информацией
   document.querySelectorAll('.speaker-details').forEach(el => {
     el.style.display = 'none';
   });
 
-// Обработка кликов по кнопкам "плюс"
   document.querySelectorAll('.speaker-toggle').forEach(button => {
     button.addEventListener('click', function () {
-    // Находим ближайший родительский .slot, а внутри него ищем .speaker-details
       const details = this.closest('.slot').querySelector('.speaker-details');
-    // Проверяем, виден ли блок сейчас
       const isVisible = details.style.display === 'block';
-
-    // Показываем или скрываем
       details.style.display = isVisible ? 'none' : 'block';
-
-    // Меняем состояние кнопки (для поворота плюса)
       this.classList.toggle('active', !isVisible);
     });
   });
 
 
   // === 5. Анимация появления секций при скролле ===
-  // === Анимация появления секций при скролле ===
   const sections = document.querySelectorAll('section');
 
   const observer = new IntersectionObserver((entries) => {
@@ -97,6 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
   sections.forEach(section => {
     observer.observe(section);
   });
+
+
   // === 6. Кнопка "Добавить в календарь" (.ics файл) ===
   const addCalendarButton = document.getElementById('addToCal');
   if (addCalendarButton) {
@@ -138,7 +131,6 @@ END:VCALENDAR`;
     let w, h;
     let mouse = { x: 0, y: 0 };
 
-    // Настройка размеров
     function resizeCanvas() {
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width * devicePixelRatio;
@@ -149,7 +141,6 @@ END:VCALENDAR`;
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Создание частиц
     const particles = Array.from({ length: 120 }, () => ({
       x: Math.random() * w,
       y: Math.random() * h,
@@ -157,14 +148,12 @@ END:VCALENDAR`;
       vy: (Math.random() - 0.5) * 0.6
     }));
 
-    // Отслеживание мыши
     canvas.addEventListener('mousemove', (e) => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
     });
 
-    // Основной цикл анимации
     function animate() {
       ctx.fillStyle = '#0a142a';
       ctx.fillRect(0, 0, w, h);
@@ -181,7 +170,6 @@ END:VCALENDAR`;
         p.x += p.vx;
         p.y += p.vy;
 
-        // Отражение от краёв
         if (p.x < 0 || p.x > w) p.vx *= -1;
         if (p.y < 0 || p.y > h) p.vy *= -1;
 
@@ -194,5 +182,40 @@ END:VCALENDAR`;
 
     animate();
   }
+
+
+  // === 8. ПРОВЕРКА НАЛИЧИЯ ПРЕЗЕНТАЦИЙ И ОТОБРАЖЕНИЕ ССЫЛОК ===
+  const presentations = [
+    { statusId: "pres-shchiblykina-status", url: "presentations/shchiblykina-centralization.pdf" },
+    { statusId: "pres-kosenko-status", url: "presentations/kosenko-standardization.pdf" },
+    { statusId: "pres-izvekova-status", url: "presentations/izvekova-logistics.pdf" },
+    { statusId: "pres-zhitkova-status", url: "presentations/zhitkova-lis.pdf" },
+    { statusId: "pres-vostrikova-status", url: "presentations/vostrikova-cytology.pdf" },
+    { statusId: "pres-ten-status", url: "presentations/ten-quality.pdf" }
+  ];
+
+  presentations.forEach(pres => {
+    const statusEl = document.getElementById(pres.statusId);
+    const downloadLink = statusEl.previousElementSibling; // <a> перед span
+
+    if (!statusEl || !downloadLink) return;
+
+    // Временно пишем "Проверка..." для обратной связи
+    statusEl.textContent = "Проверка...";
+
+    fetch(pres.url, { method: 'HEAD' })
+      .then(response => {
+        if (response.ok) {
+          statusEl.textContent = "Презентация доступна";
+          statusEl.style.color = "var(--accent)";
+          downloadLink.style.display = "inline-flex";
+        } else {
+          statusEl.textContent = "Презентация будет доступна после конференции";
+        }
+      })
+      .catch(() => {
+        statusEl.textContent = "Презентация будет доступна после конференции";
+      });
+  });
 
 });
