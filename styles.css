@@ -426,44 +426,42 @@ a:hover {
 
 
 
-/* === Sections === */
-section {
-  padding: 60px 0;
-  border-top: 1px solid var(--line);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* === Section Titles & Notes === */
+.section-title,
+.section-note {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-title {
   font-size: 28px;
   font-weight: 800;
-  margin: 0 0 16px;
+  margin-bottom: 16px;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .section-title {
-    text-align: left;
-  }
 }
 
 .section-note {
   color: var(--muted);
-  margin: 0 0 24px;
+  margin-bottom: 24px;
   text-align: center;
   font-size: 15px;
   line-height: 1.5;
 }
 
+/* На десктопе — только если родитель требует, можно выровнять по левому краю */
 @media (min-width: 768px) {
-  .section-note {
+  #about .section-title,
+  #about .section-note,
+  #program .section-title,
+  #program .section-note,
+  #participants .section-title,
+  #participants .section-note,
+  #info .section-title,
+  #info .section-note {
     text-align: left;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
