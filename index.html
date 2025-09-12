@@ -652,5 +652,42 @@
 
   <!-- Скрипт -->
   <script src="script.js"></script>
+  <script>
+// Инициализация Яндекс.Карты
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof ymaps === 'undefined') return;
+
+  ymaps.ready(function () {
+    const mapElement = document.getElementById('yandex-map');
+    if (!mapElement) return;
+
+    // Координаты: БЦ «Новатор», Красногорск
+    const coords = [55.793848, 37.279432];
+
+    const map = new ymaps.Map("yandex-map", {
+      center: coords,
+      zoom: 15,
+      controls: ['zoomControl', 'fullscreenControl']
+    });
+
+    // Добавляем метку
+    const placemark = new ymaps.Placemark(coords, {
+      balloonContent: `
+        <b>Лабораторная медицина Подмосковья</b><br>
+        Дом Правительства МО, БЦ «Новатор»<br>
+        7 этаж, конференц-зал<br>
+        25 сентября 2025, 11:00–18:00
+      `
+    }, {
+      preset: 'islands#redCircleDotIcon'
+    });
+
+    map.geoObjects.add(placemark);
+
+    // Опционально: плавное центрирование при клике
+    map.behaviors.enable('scrollZoom'); // Zoom колёсиком мыши
+  });
+});
+</script>
 </body>
 </html>
