@@ -22,40 +22,37 @@
   <!-- Прогресс-бар прокрутки -->
   <div class="progress" id="progress"></div>
 
+  <!-- Навигация -->
   <nav class="nav">
-  <div class="container nav-inner">
-    <!-- Логотип и название -->
-    <a href="#" class="brand-link">
-      <div class="brand">
+    <div class="container nav-inner">
+      <!-- Логотип -->
+      <a href="#" class="brand-link">
         <img src="img/logo-cls.png" alt="ЦЛС Московской области" class="brand-logo" width="40" height="40">
         <div class="brand-text">
           <span class="brand-title">ЦЛС</span>
           <span class="brand-subtitle">Московской области</span>
         </div>
+      </a>
+
+      <!-- Навигационные ссылки -->
+      <div class="nav-links" id="nav-links">
+        <a href="#about">О событии</a>
+        <a href="#program">Программа</a>
+        <a href="#participants">Участники</a>
+        <a href="#info">Гостям</a>
       </div>
-    </a>
 
-    <!-- Навигационные ссылки -->
-    <div class="nav-links" id="nav-links">
-      <a href="#about">О событии</a>
-      <a href="#program">Программа</a>
-      <a href="#participants">Участники</a>
-      <a href="#info">Гостям</a>
+      <!-- Бургер-меню -->
+      <button class="nav-burger" id="nav-burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- Кнопка бургер-меню (для мобильных) -->
-    <button class="nav-burger" id="nav-burger" aria-label="Открыть меню">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</nav>
-
-  <!-- Главный экран (Hero) -->
+  <!-- Главный экран -->
   <header class="hero">
     <div class="container grid">
-      <!-- Текстовая часть -->
+      <!-- Левая колонка: текст -->
       <div class="hero-content">
         <div class="kicker">
           <span class="tag">🏛️ Официальное мероприятие</span>
@@ -88,7 +85,6 @@
         </div>
 
         <!-- Обратный отсчёт -->
-        <!-- Обратный отсчёт -->
         <div class="countdown" id="countdown" aria-label="До начала">
           <div class="countdown-wrapper">
             <div class="countdown-title">До начала события</div>
@@ -114,44 +110,31 @@
         </div>
       </div>
 
-      <!-- Изображение -->
+      <!-- Правая колонка: изображение -->
       <div class="hero-image">
         <img 
           src="img/venue/novator-building.jpg" 
-          alt="Бизнес-центр «Новатор», Красногорск — место проведения конференции" 
-          style="
-            width: 100%; 
-            max-width: 520px; 
-            height: auto; 
-            border-radius: 16px; 
-            display: block; 
-            margin: 0 auto;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-          "
+          alt="Бизнес-центр «Новатор», Красногорск — место проведения конференции"
+          loading="lazy"
         >
-        <p class="section-note" style="margin-top: 16px; text-align: center; font-size: 0.95em; color: var(--gray);">
-          Место проведения: БЦ «Новатор», г. Красногорск, 7 этаж, конференц-зал
-        </p>
+        <p class="section-note">Место проведения: БЦ «Новатор», г. Красногорск, 7 этаж, конференц-зал</p>
       </div>
     </div>
   </header>
 
-  <!-- Секция: О событии -->
-  <section id="about">
+  <!-- О событии -->
+  <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">О событии</h2>
-      <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 48px;">
+      <p class="section-note">
         Цель — рост качества лабораторной диагностики и оказания медицинской помощи, стратегические идеи для будущего развития, инновации и практические решения для медицинских организаций Московской области
       </p>
 
-      <div class="grid2 gap-24">
+      <div class="grid-2 gap-lg">
         <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="font-size: 24px;">👥</div>
-            <h3 style="color: var(--accent); margin: 0;">Кто будет на конференции</h3>
-          </div>
-          <ul style="padding-left: 20px; color: var(--ink); line-height: 1.6;">
+          <div class="card-icon">👥</div>
+          <h3>Кто будет на конференции</h3>
+          <ul class="list">
             <li><strong>Федеральные и региональные организации:</strong><br>
               Минздрав Московской области, НМИЦ АГП им. В.И. Кулакова</li>
             <li><strong>Экспертное сообщество:</strong><br>
@@ -162,11 +145,9 @@
         </div>
 
         <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="font-size: 24px;">💡</div>
-            <h3 style="color: var(--accent); margin: 0;">Что получите?</h3>
-          </div>
-          <ul style="padding-left: 20px; color: var(--ink); line-height: 1.6;">
+          <div class="card-icon">💡</div>
+          <h3>Что получите?</h3>
+          <ul class="list">
             <li>Кейсы и аналитика по централизации и интеграции ЛИС</li>
             <li>Экспертный нетворкинг с ключевыми игроками региона</li>
             <li>Полезные контакты для профессионального роста</li>
@@ -177,15 +158,13 @@
     </div>
   </section>
 
-  <!-- Секция: Программа -->
-  <section id="program">
+  <!-- Программа -->
+  <section id="program" class="section">
     <div class="container">
       <h2 class="section-title">Программа</h2>
-      <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
-        Чёткий тайминг, ключевые темы и возможность узнать больше о каждом спикере.
-      </p>
+      <p class="section-note">Чёткий тайминг, ключевые темы и возможность узнать больше о каждом спикере.</p>
 
-      <div class="timeline" id="timeline">
+      <div class="timeline">
         <!-- Регистрация -->
         <div class="slot" data-tags="организация">
           <div class="slot-header">
@@ -204,7 +183,7 @@
           <!-- Приветственное слово -->
           <div class="speaker-group">
             <p><strong>Приветственное слово:</strong></p>
-            <div class="speaker-card-inline" style="margin-top: 8px;">
+            <div class="speaker-card-inline">
               <img src="img/speakers/zabelin.jpg" alt="Максим Забелин" class="avatar-sm">
               <div>
                 <strong>Забелин Максим</strong>
@@ -475,94 +454,90 @@
     </div>
   </section>
 
-  <!-- Секция: Приглашённые эксперты -->
-  <section id="participants">
+  <!-- Участники -->
+  <section id="participants" class="section">
     <div class="container">
       <h2 class="section-title">Приглашённые эксперты</h2>
-      <p class="section-note" style="text-align: center;">
-        Ведущие специалисты России — федеральный уровень
-      </p>
+      <p class="section-note">Ведущие специалисты России — федеральный уровень</p>
 
       <div class="cards-grid">
         <div class="expert-card">
           <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Годков М.А.</h4>
+          <h4>Годков М.А.</h4>
           <div class="badge-sm">РМАНПО</div>
-          <p class="section-note" style="margin: 12px 0 0;">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
+          <p class="section-note">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Иванов А.М.</h4>
+          <h4>Иванов А.М.</h4>
           <div class="badge-sm">ФЛМ, РАН</div>
-          <p class="section-note" style="margin: 12px 0 0;">Президент ФЛМ, профессор, член-корр. РАН</p>
+          <p class="section-note">Президент ФЛМ, профессор, член-корр. РАН</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/priputnevich.jpg" alt="Татьяна Припутневич" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Припутневич Т.В.</h4>
+          <h4>Припутневич Т.В.</h4>
           <div class="badge-sm">НМИЦ АГиП</div>
-          <p class="section-note" style="margin: 12px 0 0;">Главный внештатный микробиолог Минздрава РФ</p>
+          <p class="section-note">Главный внештатный микробиолог Минздрава РФ</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/voronkov.jpg" alt="Алексей Воронков" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Воронков А.А.</h4>
+          <h4>Воронков А.А.</h4>
           <div class="badge-sm">Волгоград</div>
-          <p class="section-note" style="margin: 12px 0 0;">Главврач по КЛД, директор медцентра</p>
+          <p class="section-note">Главврач по КЛД, директор медцентра</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/lambakakhar.jpg" alt="Мария Ламбакахар" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Ламбакахар М.Г.</h4>
+          <h4>Ламбакахар М.Г.</h4>
           <div class="badge-sm">РМАНПО</div>
-          <p class="section-note" style="margin: 12px 0 0;">К.м.н., доцент кафедры КЛД</p>
+          <p class="section-note">К.м.н., доцент кафедры КЛД</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/kalacheva.jpg" alt="Ольга Калачева" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Калачева О.С.</h4>
+          <h4>Калачева О.С.</h4>
           <div class="badge-sm">МЕДСИ</div>
-          <p class="section-note" style="margin: 12px 0 0;">Руководитель единой КДЛ ГК «МЕДСИ»</p>
+          <p class="section-note">Руководитель единой КДЛ ГК «МЕДСИ»</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/sunzova.jpg" alt="Инна Сунцова" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Сунцова И.Г.</h4>
+          <h4>Сунцова И.Г.</h4>
           <div class="badge-sm">ФЛМ, МО</div>
-          <p class="section-note" style="margin: 12px 0 0;">Председатель Регкомитета ФЛМ по МО</p>
+          <p class="section-note">Председатель Регкомитета ФЛМ по МО</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/shatokhina.jpg" alt="Светлана Шатохина" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Шатохина С.Н.</h4>
+          <h4>Шатохина С.Н.</h4>
           <div class="badge-sm">МОНИКИ</div>
-          <p class="section-note" style="margin: 12px 0 0;">Профессор, зав. кафедрой КЛД МОНИКИ</p>
+          <p class="section-note">Профессор, зав. кафедрой КЛД МОНИКИ</p>
         </div>
 
         <div class="expert-card">
           <img src="img/experts/kudryavtseva.jpg" alt="Лариса Кудрявцева" class="avatar-lg">
-          <h4 style="margin: 16px 0 8px; color: var(--accent);">Кудрявцева Л.В.</h4>
+          <h4>Кудрявцева Л.В.</h4>
           <div class="badge-sm">7 ЛЦ МНПЦЛИ</div>
-          <p class="section-note" style="margin: 12px 0 0;">Зав. лабораторией КДЛ 7 Лабораторного центра</p>
+          <p class="section-note">Зав. лабораторией КДЛ 7 Лабораторного центра</p>
         </div>
-      </div>      
+      </div>
     </div>
   </section>
 
-  <!-- Секция: Информация для гостей -->
-  <section id="info">
+  <!-- Информация для гостей -->
+  <section id="info" class="section">
     <div class="container">
       <h2 class="section-title">Информация для гостей</h2>
 
-      <div class="grid2 gap-24" style="margin-bottom: 40px;">
+      <div class="grid-2 gap-lg">
         <div>
-          <div class="card-panel" style="margin-bottom: 24px;">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-              <div style="font-size: 24px;">📍</div>
-              <h3 style="color: var(--accent); margin: 0;">Проход и площадка</h3>
-            </div>
-            <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
+          <div class="card-panel">
+            <div class="card-icon">📍</div>
+            <h3>Проход и площадка</h3>
+            <ul class="list">
               <li><strong>Регистрация:</strong> с 11:00, 7 этаж</li>
               <li><strong>Проход:</strong> по спискам, бейдж обязателен</li>
               <li><strong>Документ:</strong> ОБЯЗАТЕЛЬНО паспорт РФ</li>
@@ -571,11 +546,9 @@
           </div>
 
           <div class="card-panel">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-              <div style="font-size: 24px;">🍽️</div>
-              <h3 style="color: var(--accent); margin: 0;">Удобства</h3>
-            </div>
-            <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
+            <div class="card-icon">🍽️</div>
+            <h3>Удобства</h3>
+            <ul class="list">
               <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
               <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
               <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
@@ -583,37 +556,19 @@
           </div>
         </div>
 
-        <!-- Интерактивная карта -->
-        <div class="card-panel" style="height: fit-content;">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
-            <div style="font-size: 24px;">🗺️</div>
-            <h3 style="color: var(--accent); margin: 0;">Как добраться</h3>
-          </div>
-
-          <!-- Контейнер карты -->
-          <div id="yandex-map" style="
-            width: 100%;
-            height: 300px;
-            border-radius: 12px;
-            border: 1px solid var(--line);
-            background: #0b1326;
-            margin-bottom: 16px;
-          "></div>
-
-          <p class="section-note" style="text-align: center; margin: 0;">
-            Дом Правительства МО, БЦ «Новатор», г. Красногорск
-          </p>
+        <div class="card-panel map-container">
+          <div class="card-icon">🗺️</div>
+          <h3>Как добраться</h3>
+          <div id="yandex-map"></div>
+          <p class="section-note">Дом Правительства МО, БЦ «Новатор», г. Красногорск</p>
         </div>
       </div>
 
-      <div style="max-width: 800px; margin: 0 auto;">
+      <div class="faq-container">
         <div class="card-panel">
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; justify-content: center;">
-            <div style="font-size: 24px;">❓</div>
-            <h3 style="color: var(--accent); margin: 0; text-align: center;">Частые вопросы</h3>
-          </div>
-          
-          <div style="max-width: 600px; margin: 0 auto;">
+          <div class="card-icon">❓</div>
+          <h3>Частые вопросы</h3>
+          <div class="faq-list">
             <details>
               <summary>Какой дресс-код?</summary>
               <p>Деловой стиль для официальной части.</p>
@@ -632,44 +587,26 @@
     </div>
   </section>
 
- <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <!-- Первая строка: логотипы и контакты -->
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
       <div class="footer-main">
-        <!-- Организатор -->
         <div class="footer-block">
-          <img 
-            src="img/logos/logo-minzdrav-mo.png" 
-            alt="Министерство здравоохранения Московской области" 
-            class="footer-logo"
-            loading="lazy"
-            width="60"
-            height="60"
-          >
+          <img src="img/logos/logo-minzdrav-mo.png" alt="Министерство здравоохранения Московской области" class="footer-logo">
           <div class="footer-info">
             <span class="footer-label">Организатор</span>
             <p class="footer-text">Министерство здравоохранения<br>Московской области</p>
           </div>
         </div>
 
-        <!-- Партнёр -->
         <div class="footer-block">
-          <img 
-            src="img/logos/logo-cviom.png" 
-            alt="ГКУ МО «Центр внедрения изменений»" 
-            class="footer-logo"
-            loading="lazy"
-            width="60"
-            height="60"
-          >
+          <img src="img/logos/logo-cviom.png" alt="ГКУ МО «Центр внедрения изменений»" class="footer-logo">
           <div class="footer-info">
             <span class="footer-label">Партнёр проекта</span>
             <p class="footer-text">ГКУ МО «Центр внедрения<br>изменений Московской области»</p>
           </div>
         </div>
 
-        <!-- Контакты -->
         <div class="footer-block footer-contacts">
           <div class="contact-icons">
             <span>📧</span>
@@ -683,18 +620,15 @@
         </div>
       </div>
 
-      <!-- Разделитель -->
       <div class="footer-divider"></div>
 
-      <!-- Копирайт -->
       <div class="footer-copyright">
         <p>© 2025 Конференция «Лабораторная медицина Подмосковья»</p>
         <p class="copyright-secondary">Все права защищены</p>
       </div>
     </div>
-  </div>
-</footer>
-  
+  </footer>
+
   <!-- Скрипт -->
   <script src="script.js"></script>
 
@@ -702,20 +636,13 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       if (typeof ymaps === 'undefined') return;
-
       ymaps.ready(function () {
-        const mapElement = document.getElementById('yandex-map');
-        if (!mapElement) return;
-
-        // Правильные координаты: БЦ «Новатор», Красногорск
         const coords = [55.817062, 37.383687];
-
         const map = new ymaps.Map("yandex-map", {
           center: coords,
           zoom: 15,
           controls: ['zoomControl', 'fullscreenControl']
         });
-
         const placemark = new ymaps.Placemark(coords, {
           balloonContent: `
             <div style="font-family: system-ui, sans-serif; max-width: 300px;">
@@ -723,19 +650,11 @@
               <small>25 сентября 2025, 11:00–18:00</small><br>
               <strong>Адрес:</strong> БЦ «Новатор», 7 этаж<br>
               г. Красногорск, ул. Правды, д. 6
-            </div>
-          `
-        }, {
-          preset: 'islands#redCircleDotIcon'
-        });
-
+            </div>`
+        }, { preset: 'islands#redCircleDotIcon' });
         map.geoObjects.add(placemark);
-
-        // Адаптив: уменьшаем масштаб на мобильных
         function adjustZoom() {
-          if (window.innerWidth <= 768 && map.getZoom() > 14) {
-            map.setZoom(14);
-          }
+          if (window.innerWidth <= 768 && map.getZoom() > 14) map.setZoom(14);
         }
         window.addEventListener('resize', adjustZoom);
         adjustZoom();
