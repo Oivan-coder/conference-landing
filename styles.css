@@ -311,7 +311,144 @@ a:hover {
     text-align: left; /* На десктопе в левой колонке - по левому краю */
   }
 }
+/* === ОБРАТНЫЙ ОТСЧЕТ === */
+.countdown {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+.countdown-wrapper {
+  background: rgba(11, 19, 38, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-title {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.countdown-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cd-box {
+  min-width: 70px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  opacity: 0.7;
+}
+
+.cd-box:hover {
+  transform: translateY(-4px);
+  background: rgba(15, 23, 42, 0.95);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(34, 211, 238, 0.15);
+}
+
+.cd-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+  margin-bottom: 4px;
+}
+
+.cd-label {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Адаптив для обратного отсчета */
+@media (max-width: 768px) {
+  .countdown-wrapper {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+  
+  .countdown-grid {
+    gap: 12px;
+  }
+  
+  .cd-box {
+    min-width: 60px;
+    padding: 14px 6px;
+  }
+  
+  .cd-num {
+    font-size: 24px;
+  }
+  
+  .cd-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-grid {
+    gap: 8px;
+  }
+  
+  .cd-box {
+    min-width: 54px;
+    padding: 12px 4px;
+  }
+  
+  .cd-num {
+    font-size: 20px;
+  }
+}
+
+/* Десктоп: выравнивание по левому краю */
+@media (min-width: 968px) {
+  .countdown {
+    justify-content: flex-start;
+  }
+  
+  .countdown-wrapper {
+    text-align: left;
+  }
+  
+  .countdown-title {
+    text-align: left;
+  }
+  
+  .countdown-grid {
+    justify-content: flex-start;
+  }
+}
 .subtitle {
   color: var(--muted);
   max-width: 500px;
