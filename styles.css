@@ -629,9 +629,9 @@ details summary {
   padding: 8px 0;
 }
 
-/* === FOOTER: Apple-style минимализм === */
+/* === FOOTER: Apple-style переделка === */
 .footer {
-  padding: 80px 0 40px;
+  padding: 70px 0 40px;
   color: var(--muted);
   background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(20px);
@@ -647,51 +647,52 @@ details summary {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px;
+  width: 120px;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
-/* Сетка: три колонки */
-.footer-partners {
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto 48px;
+  gap: 32px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    justify-items: start;
+  }
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .footer-partners {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    text-align: left;
-  }
-}
-
-/* Блок: лого + текст */
-.footer-org-pair,
-.footer-contact-pair {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-@media (min-width: 768px) {
-  .footer-org-pair,
-  .footer-contact-pair {
+  .footer-block {
     flex-direction: row;
     align-items: flex-start;
+    text-align: left;
     gap: 16px;
   }
 }
 
-/* Логотип — ультраминималистичный */
-.footer-logo-square {
-  width: 56px;
-  height: 56px;
+.footer-logo {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   border-radius: 12px;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -699,23 +700,28 @@ details summary {
   padding: 10px;
   filter: grayscale(35%) brightness(120%);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
 
-.footer-logo-square:hover {
+.footer-logo:hover {
   transform: scale(1.05);
   filter: grayscale(0%) brightness(140%);
   border-color: rgba(34, 211, 238, 0.2);
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.08);
 }
 
-/* Подписи — тонкие и элегантные */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-label {
   font-size: 11px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   display: block;
   opacity: 0.8;
 }
@@ -729,35 +735,38 @@ details summary {
 }
 
 /* Контакты */
-.footer-contact-pair {
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
-  .footer-contact-pair {
+  .footer-contacts {
+    flex-direction: row;
     align-items: flex-start;
   }
 }
 
-.contact-icon-block {
-  font-size: 20px;
-  line-height: 1.4;
-  color: var(--accent);
-  min-width: 24px;
-  text-align: center;
-  opacity: 0.9;
-}
-
-.contact-details {
+.contact-icons {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  gap: 8px;
+  font-size: 18px;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .contact-details {
+  .contact-info {
     text-align: left;
   }
 }
@@ -781,18 +790,16 @@ details summary {
   color: #94a3b8;
   font-weight: 400;
   margin-top: 4px;
-  font-style: normal;
 }
 
-/* Разделитель — ultra thin */
+/* Разделитель */
 .footer-divider {
   height: 0.5px;
   background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.15), transparent);
-  margin: 48px auto;
-  max-width: 800px;
+  width: 100%;
 }
 
-/* Копирайт — очень лёгкий */
+/* Копирайт */
 .footer-copyright {
   text-align: center;
   font-size: 13px;
@@ -807,6 +814,26 @@ details summary {
   color: #64748b;
   margin-top: 6px;
   font-weight: 300;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 767px) {
+  .footer {
+    padding: 50px 0 30px;
+  }
+  
+  .footer-main {
+    gap: 28px;
+  }
+  
+  .footer-block {
+    gap: 14px;
+  }
+  
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* Анимация появления при скролле */
