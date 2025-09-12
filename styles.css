@@ -569,3 +569,16 @@ footer {
   z-index: 60;
   transition: width 0.05s ease;
 }
+.pres-status-waiting {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(11, 18, 32, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #d1d5db;
+  font-style: italic;
+  margin-top: 8px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+}
