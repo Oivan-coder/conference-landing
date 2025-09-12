@@ -140,7 +140,7 @@ a:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 8px; /* уменьшили отступ перед баннером */
 }
 
 .tag {
@@ -160,6 +160,30 @@ a:hover {
 .tag:hover {
   background: rgba(34, 211, 238, 0.1);
   color: var(--ink);
+}
+
+/* Выделенный тег для "Очное участие" */
+.tag-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #001018;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 2px 6px rgba(34, 211, 238, 0.2);
+}
+
+/* Баннер под тегами — акцент на условиях участия */
+.onsite-banner {
+  text-align: center;
+  background: rgba(11, 18, 32, 0.8);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 12px;
+  margin: 0 auto 16px;
+  border: 1px solid var(--line);
+  max-width: 500px;
+  letter-spacing: -0.1px;
 }
 
 .title {
