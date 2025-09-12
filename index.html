@@ -23,20 +23,35 @@
   <div class="progress" id="progress"></div>
 
   <!-- Навигация -->
-  <nav class="nav">
-    <div class="container nav-inner">
+<nav class="nav">
+  <div class="container nav-inner">
+    <!-- Логотип и название -->
+    <a href="#" class="brand-link">
       <div class="brand">
-        <div class="brand-badge">🧪</div>
-        Лабораторная Медицина Подмосковья
+        <img src="img/logo-cls.svg" alt="ЦЛС Московской области" class="brand-logo" width="40" height="40">
+        <div class="brand-text">
+          <span class="brand-title">ЦЛС</span>
+          <span class="brand-subtitle">Московской области</span>
+        </div>
       </div>
-      <div class="nav-links">
-        <a href="#about">О событии</a>
-        <a href="#program">Программа</a>
-        <a href="#participants">Участники</a>
-        <a href="#info">Гостям</a>
-      </div>
+    </a>
+
+    <!-- Навигационные ссылки -->
+    <div class="nav-links" id="nav-links">
+      <a href="#about">О событии</a>
+      <a href="#program">Программа</a>
+      <a href="#participants">Участники</a>
+      <a href="#info">Гостям</a>
     </div>
-  </nav>
+
+    <!-- Кнопка бургер-меню (для мобильных) -->
+    <button class="nav-burger" id="nav-burger" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
 
   <!-- Главный экран (Hero) -->
   <header class="hero">
