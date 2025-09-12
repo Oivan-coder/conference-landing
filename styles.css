@@ -51,7 +51,7 @@ a:hover {
   padding: 0 16px;
 }
 
-/* === НАВИГАЦИЯ: Финальная версия === */
+/* === НАВИГАЦИЯ === */
 .nav {
   position: sticky;
   top: 0;
@@ -70,7 +70,7 @@ a:hover {
   gap: 16px;
 }
 
-/* Круглое лого */
+/* Лого */
 .brand-link {
   text-decoration: none;
   transition: transform 0.2s ease;
@@ -198,7 +198,6 @@ a:hover {
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
   }
-  
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -254,13 +253,19 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Десктоп: выравнивание по левому краю */
+/* На десктопе — ВСЁ по центру */
 @media (min-width: 968px) {
-  .kicker { justify-content: flex-start; }
-  .onsite-banner { text-align: left; margin: 0 0 20px 0; }
-  .hero-cta { justify-content: flex-start; }
-  .meta { flex-direction: row; justify-content: flex-start; text-align: left; gap: 16px; }
-  .countdown { justify-content: flex-start; }
+  .kicker { justify-content: center; }
+  .onsite-banner { text-align: center; margin: 0 auto 20px; }
+  .hero-cta { justify-content: center; }
+  .meta { 
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .countdown { justify-content: center; }
 }
 
 .hero-image img {
@@ -285,7 +290,7 @@ a:hover {
   color: var(--muted);
 }
 
-/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ === */
+/* === АДАПТИВ МОБИЛЬНЫХ === */
 @media (max-width: 767px) {
   .nav-inner { padding: 10px 16px; }
   .brand-title { font-size: 1.2rem; }
@@ -346,42 +351,22 @@ a:hover {
   .cd-num { font-size: 18px; }
 }
 
-/* === Section Titles & Notes === */
-.section-title,
-.section-note {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* === Section Titles & Notes — ВСЕГДА ПО ЦЕНТРУ === */
 .section-title {
   font-size: 28px;
   font-weight: 800;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
+  max-width: 800px;
   text-align: center;
 }
 
 .section-note {
   color: var(--muted);
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
+  max-width: 800px;
   text-align: center;
   font-size: 15px;
   line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-  #about .section-title,
-  #about .section-note,
-  #program .section-title,
-  #program .section-note,
-  #participants .section-title,
-  #participants .section-note,
-  #info .section-title,
-  #info .section-note {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 /* === Card Panels === */
@@ -394,6 +379,8 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .card-panel:hover {
@@ -401,7 +388,7 @@ a:hover {
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.1);
 }
 
-/* === Grid Layouts === */
+/* === Grid Layouts — ЦЕНТРИРУЕМ === */
 .grid2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -411,22 +398,24 @@ a:hover {
 @media (min-width: 768px) {
   .grid2 {
     grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 
-/* === СЕТКА ДЛЯ ЭКСПЕРТОВ === */
+/* === Карточки экспертов — по центру === */
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  margin-top: 16px;
+  margin: 16px auto;
 }
 
 @media (min-width: 768px) {
   .cards-grid {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
-    margin: 16px auto 0;
+    margin: 16px auto;
   }
 }
 
@@ -473,12 +462,15 @@ a:hover {
   width: fit-content;
 }
 
-/* === Программа / Timeline === */
+/* === Программа / Timeline — центрируем всю секцию === */
+#program .container {
+  max-width: 900px;
+}
+
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  position: relative;
 }
 
 .slot {
@@ -548,7 +540,6 @@ a:hover {
   transform: rotate(45deg);
 }
 
-/* === Карточка спикера === */
 .speaker-details {
   display: none;
   margin: 12px 0 0;
@@ -600,9 +591,10 @@ a:hover {
   margin-top: 4px;
 }
 
-/* === FAQ === */
+/* === FAQ — центрируем === */
 details {
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+  max-width: 600px;
   border-bottom: 1px solid var(--line);
   padding-bottom: 12px;
 }
@@ -616,6 +608,16 @@ details summary {
   color: var(--ink);
   cursor: pointer;
   padding: 8px 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  details {
+    text-align: left;
+  }
+  details summary {
+    text-align: left;
+  }
 }
 
 /* === КНОПКИ === */
@@ -860,7 +862,7 @@ details summary {
   .footer-logo { width: 50px; height: 50px; }
 }
 
-/* Анимация появления */
+/* Анимация */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
