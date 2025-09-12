@@ -613,40 +613,116 @@
   </section>
 
   <!-- Подвал -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <strong>Организаторы</strong>
-          <p class="footer-text">
-            Министерство здравоохранения<br>
-            Московской области
+  <!-- Подвал -->
+<footer>
+  <div class="container">
+    <!-- Сетка: логотипы + контакты -->
+    <div class="footer-grid" style="
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    ">
+    
+      <!-- Логотипы организаторов -->
+      <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 24px;
+      ">
+        <p style="margin: 0; color: var(--accent); font-weight: 700; font-size: 15px;">
+          Организаторы мероприятия
+        </p>
+
+        <div style="
+          display: flex;
+          gap: 32px;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center;
+        ">
+          
+          <!-- Логотип Минздрава МО -->
+          <div style="text-align: center;">
+            <img 
+              src="img/logos/logo-minzdrav-mo.png" 
+              alt="Министерство здравоохранения Московской области" 
+              style="
+                height: 50px;
+                object-fit: contain;
+                filter: brightness(1.1);
+              "
+            >
+            <div style="color: var(--muted); font-size: 13px; margin-top: 6px;">
+              Минздрав МО
+            </div>
+          </div>
+
+          <!-- Логотип Центра внедрения изменений -->
+          <div style="text-align: center;">
+            <img 
+              src="img/logos/logo-cviom.png" 
+              alt="ГКУ МО «Центр внедрения изменений»" 
+              style="
+                height: 50px;
+                object-fit: contain;
+                filter: brightness(1.1);
+              "
+            >
+            <div style="color: var(--muted); font-size: 13px; margin-top: 6px;">
+              Центр внедрения изменений
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Информация -->
+      <div style="display: grid; gap: 16px; text-align: center;">
+        
+        <!-- Организаторы -->
+        <div class="footer-col" style="justify-content: center;">
+          <strong style="color: var(--accent);">Организатор</strong>
+          <p class="footer-text" style="margin: 8px 0 0;">
+            Министерство здравоохранения<br>Московской области
           </p>
         </div>
-        <div class="footer-col">
-          <strong>Партнёр проекта</strong>
-          <p class="footer-text">
-            ГКУ МО «Центр внедрения<br>
-            изменений Московской области»
+
+        <!-- Партнёр проекта -->
+        <div class="footer-col" style="justify-content: center;">
+          <strong style="color: var(--accent);">Партнёр проекта</strong>
+          <p class="footer-text" style="margin: 8px 0 0;">
+            ГКУ МО «Центр внедрения<br>изменений Московской области»
           </p>
         </div>
-        <div class="footer-col">
-          <strong>Контакты</strong>
-          <p class="footer-text">
+
+        <!-- Контакты -->
+        <div class="footer-col" style="justify-content: center;">
+          <strong style="color: var(--accent);">Контакты</strong>
+          <p class="footer-text" style="margin: 8px 0 0;">
             📧 ScheblykinaIV@mosreg.ru<br>
-            📞 +7 (995) 883-23-36 - Ирина Владимировна
+            📞 +7 (995) 883-23-36 — Ирина Владимировна
           </p>
         </div>
       </div>
 
-      <div class="footer-divider"></div>
+      <!-- Разделитель -->
+      <div style="height: 1px; background: var(--line); margin: 16px 0;"></div>
 
-      <p class="footer-copyright">
+      <!-- Copyright -->
+      <p class="footer-copyright" style="text-align: center; margin: 0; color: var(--muted); font-size: 13px;">
         © 2025 · Конференция «Лабораторная медицина Подмосковья»<br>
         Все права защищены.
       </p>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <!-- Скрипт -->
   <script src="script.js"></script>
