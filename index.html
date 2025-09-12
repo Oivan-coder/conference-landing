@@ -528,15 +528,19 @@
   </section>
 
   <!-- Информация для гостей -->
+  <!-- Информация для гостей -->
   <section id="info" class="section">
     <div class="container">
       <h2 class="section-title">Информация для гостей</h2>
 
-      <div class="grid-2 gap-lg">
-        <div>
+      <div class="info-grid">
+      <!-- Левая колонка с карточками -->
+        <div class="info-cards">
           <div class="card-panel">
-            <div class="card-icon">📍</div>
-            <h3>Проход и площадка</h3>
+            <div class="card-header">
+              <div class="card-icon">📍</div>
+              <h3>Проход и площадка</h3>
+            </div>
             <ul class="list">
               <li><strong>Регистрация:</strong> с 11:00, 7 этаж</li>
               <li><strong>Проход:</strong> по спискам, бейдж обязателен</li>
@@ -546,29 +550,41 @@
           </div>
 
           <div class="card-panel">
-            <div class="card-icon">🍽️</div>
-            <h3>Удобства</h3>
+            <div class="card-header">
+              <div class="card-icon">🍽️</div>
+              <h3>Удобства</h3>
+            </div>
             <ul class="list">
               <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
               <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
-              <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
             </ul>
+            <div class="coffee-break-note">
+              <strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации
+            </div>
           </div>
         </div>
 
-        <div class="card-panel map-container">
-          <div class="card-icon">🗺️</div>
-          <h3>Как добраться</h3>
-          <div id="yandex-map"></div>
-          <p class="section-note">Дом Правительства МО, БЦ «Новатор», г. Красногорск</p>
+      <!-- Правая колонка с картой -->
+        <div class="map-panel">
+          <div class="card-panel">
+            <div class="card-header">
+              <div class="card-icon">🗺️</div>
+              <h3>Как добраться</h3>
+            </div>
+            <div id="yandex-map" class="large-map"></div>
+            <p class="section-note">Дом Правительства МО, БЦ «Новатор», г. Красногорск</p>
+          </div>
         </div>
       </div>
 
-      <div class="faq-container">
+    <!-- Частые вопросы -->
+      <div class="faq-compact">
         <div class="card-panel">
-          <div class="card-icon">❓</div>
-          <h3>Частые вопросы</h3>
-          <div class="faq-list">
+          <div class="card-header">
+            <div class="card-icon">❓</div>
+            <h3>Частые вопросы</h3>
+          </div>
+          <div class="faq-list-compact">
             <details>
               <summary>Какой дресс-код?</summary>
               <p>Деловой стиль для официальной части.</p>
