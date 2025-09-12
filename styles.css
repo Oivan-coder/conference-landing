@@ -629,136 +629,212 @@ details summary {
   padding: 8px 0;
 }
 
-/* === FOOTER: Минималистичный, лого рядом с текстом === */
+/* === FOOTER: Apple-style минимализм === */
 .footer {
-  padding: 60px 0 40px;
+  padding: 80px 0 40px;
   color: var(--muted);
-  border-top: 1px solid var(--line);
-  background: rgba(11, 18, 32, 0.7);
-  backdrop-filter: blur(12px);
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  font-weight: 350;
 }
 
-/* Сетка: три колонки — каждая пара лого + текст */
+/* Тонкая градиентная линия сверху */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* Сетка: три колонки */
 .footer-partners {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  text-align: left;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 48px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .footer-partners {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    text-align: left;
   }
 }
 
-/* Блок: лого + текст рядом */
+/* Блок: лого + текст */
 .footer-org-pair,
 .footer-contact-pair {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Логотип — квадратный, с тонкой рамкой */
+@media (min-width: 768px) {
+  .footer-org-pair,
+  .footer-contact-pair {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+/* Логотип — ультраминималистичный */
 .footer-logo-square {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  background: #0b1326;
-  padding: 4px;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  filter: grayscale(35%) brightness(120%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Эффект при наведении — чуть ярче рамка и тень */
 .footer-logo-square:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.1);
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(140%);
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 8px 24px rgba(34, 211, 238, 0.08);
 }
 
-/* Подписи */
+/* Подписи — тонкие и элегантные */
 .footer-label {
-  font-size: 12px;
-  letter-spacing: 0.8px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-weight: 500;
+  margin-bottom: 8px;
   display: block;
+  opacity: 0.8;
 }
 
 .footer-text {
-  color: var(--muted);
-  font-size: 14px;
+  color: #e2e8f0;
+  font-size: 15px;
   line-height: 1.5;
   margin: 0;
+  font-weight: 350;
 }
 
-/* === Контакты: иконки слева, текст справа === */
+/* Контакты */
 .footer-contact-pair {
-  align-items: flex-start;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-contact-pair {
+    align-items: flex-start;
+  }
 }
 
 .contact-icon-block {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.4;
   color: var(--accent);
   min-width: 24px;
   text-align: center;
+  opacity: 0.9;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-details {
+    text-align: left;
+  }
 }
 
 .contact-link {
-  color: var(--muted);
-  font-size: 14px;
-  transition: color 0.3s ease;
+  color: #cbd5e1;
+  font-size: 15px;
+  transition: all 0.3s ease;
   text-decoration: none;
+  letter-spacing: -0.01em;
 }
 
 .contact-link:hover {
   color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .contact-person {
-  font-size: 14px;
-  color: var(--ink);
-  font-weight: 600;
+  font-size: 13px;
+  color: #94a3b8;
+  font-weight: 400;
   margin-top: 4px;
+  font-style: normal;
 }
 
-/* === Разделитель — прозрачный градиент === */
+/* Разделитель — ultra thin */
 .footer-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--line), transparent);
-  margin: 32px auto;
-  max-width: 600px;
-  opacity: 0.5;
+  height: 0.5px;
+  background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.15), transparent);
+  margin: 48px auto;
+  max-width: 800px;
 }
 
-/* === Копирайт === */
+/* Копирайт — очень лёгкий */
 .footer-copyright {
   text-align: center;
   font-size: 13px;
   line-height: 1.6;
-  color: var(--muted);
+  color: #94a3b8;
+  font-weight: 350;
+  letter-spacing: 0.02em;
 }
 
 .copyright-secondary {
   font-size: 12px;
-  color: #6b7280;
-  margin-top: 4px;
+  color: #64748b;
+  margin-top: 6px;
+  font-weight: 300;
+}
+
+/* Анимация появления при скролле */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer > .container > * {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer-partners {
+  animation-delay: 0.1s;
+}
+
+.footer-divider {
+  animation-delay: 0.2s;
+}
+
+.footer-copyright {
+  animation-delay: 0.3s;
 }
 
 /* === Progress Bar === */
