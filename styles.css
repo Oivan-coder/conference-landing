@@ -21,14 +21,15 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* лучше подходит под навигацию */
+  scroll-padding-top: 80px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 80% -10%, rgba(34, 211, 238, 0.08), transparent),
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background: 
+    radial-gradient(1200px 800px at 80% -10%, rgba(34, 211, 238, 0.08), transparent),
     linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
   color: var(--ink);
   line-height: 1.6;
@@ -52,6 +53,13 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* === ГРАДИЕНТНЫЙ ТЕКСТ (унифицированный класс) === */
+.gradient-text {
+  background: linear-gradient(to right, #e5e7eb, #a3bffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* === НАВИГАЦИЯ === */
@@ -106,15 +114,17 @@ a:hover {
   font-weight: 800;
   font-size: 1.35rem;
   letter-spacing: -0.02em;
-  background: linear-gradient(to right, #e5e7eb, #a3bffa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+.brand-title span {
+  @extend .gradient-text; /* если поддерживается препроцессор, иначе скопировано ниже */
 }
 
 .brand-subtitle {
   font-size: 0.75rem;
   color: var(--muted);
   font-weight: 500;
+  margin: 0;
 }
 
 /* Навигационные ссылки */
@@ -221,6 +231,8 @@ a:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 20px;
+  list-style: none;
+  padding: 0;
 }
 
 @media (min-width: 992px) {
@@ -258,10 +270,9 @@ a:hover {
   font-weight: 800;
   margin: 16px 0;
   letter-spacing: -0.02em;
-  background: linear-gradient(to right, #e5e7eb, #a3bffa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
+}
+.title {
+  @extend .gradient-text;
 }
 
 @media (min-width: 768px) {
@@ -325,6 +336,7 @@ a:hover {
 /* Обратный отсчёт */
 .countdown {
   margin-top: 32px;
+  display: flex;
   justify-content: center;
 }
 
@@ -477,9 +489,9 @@ a:hover {
   font-weight: 800;
   margin: 0 auto 16px;
   text-align: center;
-  background: linear-gradient(to right, #e5e7eb, #a3bffa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+.section-title {
+  @extend .gradient-text;
 }
 
 .section-note {
@@ -830,42 +842,6 @@ a:hover {
   color: var(--muted);
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .large-map {
-    height: 300px;
-  }
-  
-  .card-header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .coffee-break-note {
-    padding: 0.8rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .large-map {
-    height: 250px;
-  }
-  
-  .card-panel {
-    padding: 1.2rem;
-  }
-  
-  .faq-list-compact summary {
-    font-size: 0.95rem;
-  }
-}
-
 /* === Кнопки === */
 .btn {
   display: inline-flex;
@@ -1084,7 +1060,7 @@ a:hover {
 .footer-divider { animation-delay: 0.2s; }
 .footer-copyright { animation-delay: 0.3s; }
 
-/* === Мобильное меню (JS активирует .active) === */
+/* === Мобильное меню === */
 @media (max-width: 991px) {
   .nav-links {
     position: fixed;
