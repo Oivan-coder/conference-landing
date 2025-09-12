@@ -51,7 +51,7 @@ a:hover {
   padding: 0 16px;
 }
 
-/* === НАВИГАЦИЯ: Полный редизайн === */
+/* === НАВИГАЦИЯ: Финальная версия === */
 .nav {
   position: sticky;
   top: 0;
@@ -70,7 +70,7 @@ a:hover {
   gap: 16px;
 }
 
-/* Бренд (лого + текст) */
+/* Круглое лого */
 .brand-link {
   text-decoration: none;
   transition: transform 0.2s ease;
@@ -90,6 +90,11 @@ a:hover {
   height: 40px;
   object-fit: contain;
   flex-shrink: 0;
+  border-radius: 50%; /* Делаем лого круглым! */
+  border: 2px solid var(--accent); /* Добавляем обводку акцентным цветом */
+  padding: 3px; /* Немного отступа внутри круга */
+  background: #0b1326; /* Фон внутри круга */
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.2); /* Лёгкое свечение */
 }
 
 .brand-text {
@@ -113,7 +118,7 @@ a:hover {
   font-weight: 500;
 }
 
-/* Навигационные ссылки (для десктопа) */
+/* Навигационные ссылки */
 .nav-links {
   display: flex;
   gap: 4px;
@@ -141,7 +146,7 @@ a:hover {
   background: rgba(34, 211, 238, 0.15);
 }
 
-/* Бургер-меню (скрыт на десктопе) */
+/* Бургер-меню */
 .nav-burger {
   display: none;
   flex-direction: column;
@@ -170,7 +175,6 @@ a:hover {
   transition: var(--transition);
 }
 
-/* Состояние активного бургера */
 .nav-burger.active span:nth-child(1) {
   transform: translateY(6px) rotate(45deg);
 }
@@ -181,8 +185,140 @@ a:hover {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (до 768px) === */
-@media (max-width: 768px) {
+/* === ГЕРОЙ СЕКЦИЯ: Исправляем выравнивание === */
+.hero .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Десктоп: две колонки */
+@media (min-width: 968px) { /* Увеличил планку до 968px для лучшего перехода */
+  .hero .grid {
+    grid-template-columns: 1.1fr 0.9fr; /* Текст занимает чуть больше места */
+    gap: 60px;
+    text-align: left; /* Выравниваем весь текст по левому краю */
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Принудительно выравниваем элементы по левому краю на десктопе */
+  .kicker,
+  .onsite-banner,
+  .hero-cta,
+  .meta,
+  .countdown {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+}
+
+/* Элементы, которые должны быть по центру на мобильном и по левому краю на десктопе */
+.kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+.onsite-banner {
+  text-align: center;
+  background: rgba(11, 18, 32, 0.8);
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin: 0 auto 20px;
+  border: 1px solid var(--line);
+  max-width: 100%;
+  letter-spacing: -0.1px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Десктоп: выравниваем по левому краю */
+@media (min-width: 968px) {
+  .kicker {
+    justify-content: flex-start;
+  }
+  
+  .onsite-banner {
+    text-align: left;
+    margin: 0 0 20px 0;
+  }
+  
+  .hero-cta {
+    justify-content: flex-start;
+  }
+  
+  .meta {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 16px;
+  }
+  
+  .countdown {
+    justify-content: flex-start;
+  }
+}
+
+/* Увеличиваем изображение на десктопе */
+.hero-image img {
+  width: 100%;
+  max-width: 560px; /* Увеличил максимальную ширину */
+  height: auto;
+  border-radius: 20px; /* Увеличил радиус скругления */
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-4px);
+}
+
+.hero-image .section-note {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 0.95em;
+  color: var(--muted);
+}
+
+/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ === */
+@media (max-width: 767px) {
   .nav-inner {
     padding: 10px 16px;
   }
@@ -195,7 +331,7 @@ a:hover {
     font-size: 0.7rem;
   }
 
-  /* Прячем обычное меню, показываем бургер */
+  /* Мобильное меню */
   .nav-links {
     display: none;
     position: absolute;
@@ -230,12 +366,61 @@ a:hover {
   .nav-burger {
     display: flex;
   }
+  
+  /* Уменьшаем отступы в герое на мобильных */
+  .hero {
+    padding: 40px 0 30px;
+  }
+  
+  .hero .grid {
+    gap: 30px;
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .meta {
+    gap: 12px;
+  }
+  
+  .meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
 }
 
 /* Для очень маленьких экранов */
 @media (max-width: 360px) {
   .brand-text {
-    display: none; /* Прячем текст, оставляем только лого */
+    display: none;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .countdown {
+    gap: 6px;
+  }
+  
+  .cd-box {
+    min-width: 56px;
+    padding: 6px 4px;
+  }
+  
+  .cd-num {
+    font-size: 18px;
   }
 }
 
