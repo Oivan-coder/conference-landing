@@ -612,7 +612,7 @@
     </div>
   </section>
 
-  <footer>
+ <footer>
   <div class="container">
     <!-- Основная сетка футера -->
     <div class="footer-grid">
@@ -620,12 +620,16 @@
       <!-- Блок организатора -->
       <div class="footer-col">
         <div class="footer-org">
-          <img 
-            src="img/logos/logo-minzdrav-mo.png" 
-            alt="Министерство здравоохранения МО" 
-            class="footer-logo"
-            loading="lazy"
-          >
+          <div class="footer-logo-container">
+            <img 
+              src="img/logos/logo-minzdrav-mo.png" 
+              alt="Министерство здравоохранения МО" 
+              class="footer-logo"
+              loading="lazy"
+              width="64"
+              height="64"
+            >
+          </div>
           <div class="footer-org-info">
             <span class="footer-label">Организатор</span>
             <p class="footer-text">Министерство здравоохранения<br>Московской области</p>
@@ -636,12 +640,16 @@
       <!-- Блок партнёра -->
       <div class="footer-col">
         <div class="footer-org">
-          <img 
-            src="img/logos/logo-cviom.png" 
-            alt="ГКУ МО «Центр внедрения изменений»" 
-            class="footer-logo"
-            loading="lazy"
-          >
+          <div class="footer-logo-container">
+            <img 
+              src="img/logos/logo-cviom.png" 
+              alt="ГКУ МО «Центр внедрения изменений»" 
+              class="footer-logo"
+              loading="lazy"
+              width="64"
+              height="64"
+            >
+          </div>
           <div class="footer-org-info">
             <span class="footer-label">Партнёр проекта</span>
             <p class="footer-text">ГКУ МО «Центр внедрения<br>изменений Московской области»</p>
@@ -653,11 +661,19 @@
       <div class="footer-col">
         <div class="footer-contact">
           <span class="footer-label">Контакты</span>
-          <p class="footer-text">
-            <span class="contact-line">📧 ScheblykinaIV@mosreg.ru</span>
-            <span class="contact-line">📞 +7 (995) 883-23-36</span>
-            <span class="contact-person">Ирина Владимировна</span>
-          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <span class="contact-text">ScheblykinaIV@mosreg.ru</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span class="contact-text">+7 (995) 883-23-36</span>
+            </div>
+            <div class="contact-person">
+              <span class="contact-name">Ирина Владимировна</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -667,10 +683,13 @@
 
     <!-- Копирайт -->
     <div class="footer-copyright">
-      <p>© 2025 Конференция «Лабораторная медицина Подмосковья»<br>Все права защищены.</p>
+      <p>© 2025 Конференция «Лабораторная медицина Подмосковья»</p>
+      <p class="copyright-secondary">Все права защищены</p>
     </div>
   </div>
 </footer>
+
+  
   <!-- Скрипт -->
   <script src="script.js"></script>
 
