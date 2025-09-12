@@ -20,7 +20,6 @@
   <div class="progress" id="progress"></div>
 
   <!-- Навигация -->
-  <!-- Навигация -->
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">
@@ -30,7 +29,7 @@
       <div class="nav-links">
         <a href="#about">О событии</a>
         <a href="#program">Программа</a>
-        <a href="#participants">Участники</a> <!-- Объединённая секция -->
+        <a href="#participants">Участники</a>
         <a href="#info">Гостям</a>
       </div>
     </div>
@@ -40,14 +39,15 @@
   <header class="hero">
     <div class="container grid">
       <!-- Текстовая часть -->
-      <div class="kicker">
-        <span class="tag">🏛️ Официальное мероприятие</span>
-        <span class="tag tag-primary">📍 Очное участие</span>
-      </div>
+      <div class="hero-content">
+        <div class="kicker">
+          <span class="tag">🏛️ Официальное мероприятие</span>
+          <span class="tag tag-primary">📍 Очное участие</span>
+        </div>
 
-<div class="onsite-banner">
-  Участие — по спискам. Обязателен паспорт РФ.
-</div>
+        <div class="onsite-banner">
+          Участие — по спискам. Обязателен паспорт РФ.
+        </div>
 
         <h1 class="title">
           Лабораторная медицина Подмосковья:<br>
@@ -155,396 +155,386 @@
   </section>
 
   <!-- Секция: Программа -->
-  <!-- Секция: Программа -->
-<section id="program">
-  <div class="container">
-    <h2 class="section-title">Программа</h2>
-    <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
-      Чёткий тайминг, ключевые темы и возможность узнать больше о каждом спикере.
-    </p>
-
-    <div class="timeline" id="timeline">
-
-      <!-- Регистрация -->
-      <div class="slot" data-tags="организация">
-        <div class="slot-header">
-          <span class="time-badge">11:00–12:00</span>
-          <h4>Регистрация участников</h4>
-        </div>
-      </div>
-
-      <!-- Открытие -->
-      <!-- Открытие -->
-      <div class="slot" data-tags="открытие">
-        <div class="slot-header">
-          <span class="time-badge">12:00–12:30</span>
-          <h4>Открытие конференции</h4>
-        </div>
-
-  <!-- Приветственное слово -->
-        <div class="speaker-group">
-          <p><strong>Приветственное слово:</strong></p>
-          <div class="speaker-card-inline" style="margin-top: 8px;">
-            <img src="img/speakers/zabelin.jpg" alt="Максим Забелин" class="avatar-sm">
-            <div>
-              <strong>Забелин Максим</strong>
-              <span class="speaker-role">Заместитель Председателя Правительства Московской области – министр здравоохранения МО</span>
-            </div>
-          </div>
-        </div>
-
-  <!-- Вступительное слово -->
-        <div class="speaker-group" style="margin-top: 16px;">
-          <p><strong>Вступительное слово:</strong></p>
-
-    <!-- Михаил Годков -->
-          <div class="speaker-card-inline" style="margin: 8px 0;">
-            <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-sm">
-            <div>
-              <strong>Годков Михаил</strong>
-              <span class="speaker-role">Зав. кафедрой КЛД, РМАНПО</span>
-              <span class="speaker-role">Врач НИИ им. Склифосовского</span>
-            </div>
-          </div>
-
-    <!-- Андрей Иванов -->
-          <div class="speaker-card-inline" style="margin: 8px 0;">
-            <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-sm">
-            <div>
-              <strong>Иванов Андрей</strong>
-              <span class="speaker-role">Президент ФЛМ, член-корр. РАН</span>
-              <span class="speaker-role">Профессор, зав. кафедрой КБиЛД, ВМА им. Кирова</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Централизация -->
-      <div class="slot" data-tags="центр">
-        <div class="slot-header">
-          <span class="time-badge">12:30–12:45</span>
-          <h4>Централизация лабораторной службы Московской области</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/sheblykina.jpg" alt="И.В. Щеблыкина-Монастырёва" class="avatar-sm">
-            <div>
-              <strong>Щеблыкина-Монастырёва И.В.</strong>
-              <span class="speaker-role">Главный внештатный специалист по клинической лабораторной диагностике Министерства здравоохранения Московской области, руководитель проекта ГКУ Московской области «ЦВИОД»
-</span>
-              <span class="speaker-role">Доклад: Стандартизация взятия и маркировки проб — техника забора, штрихкоды и контроль идентификации пациента</span>
-            </div>
-          </div>
-
-          <!-- Ссылка на презентацию или сообщение -->
-          <div class="presentation-download">
-            <a href="presentations/shchiblykina-centralization.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Стандартизация -->
-      <div class="slot" data-tags="стандарты">
-        <div class="slot-header">
-          <span class="time-badge">12:45–13:00</span>
-          <h4>Стандартизация взятия и маркировки проб</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/kosenko.jpg" alt="О.А. Косенко" class="avatar-sm">
-            <div>
-              <strong>Косенко О.А.</strong>
-              <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Балашихинская больница». Эксперт по качеству лабораторных процессов</span>
-              <span class="speaker-role">Доклад: Логистика и транспортировка проб — контроль температур, сроки доставки</span>
-            </div>
-          </div>
-
-          <div class="presentation-download">
-            <a href="presentations/kosenko-standardization.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Логистика -->
-      <div class="slot" data-tags="логистика">
-        <div class="slot-header">
-          <span class="time-badge">13:00–13:15</span>
-          <h4>Маршрутизация биоматериала</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/izvekova.jpg" alt="М.С. Извекова" class="avatar-sm">
-            <div>
-              <strong>Извекова М.С.</strong>
-              <span class="speaker-role">Руководитель службы диагностики, ГБУЗ МО «Истринская КБ». Опыт оптимизации транспортировки проб — 12 лет</span>
-              <span class="speaker-role">Доклад: Регистрация и приемка проб в лаборатории — интеграция с ЛИС и первичная валидация данных</span>
-            </div>
-          </div>
-
-          <div class="presentation-download">
-            <a href="presentations/izvekova-logistics.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Регистрация проб -->
-      <div class="slot" data-tags="процессы">
-        <div class="slot-header">
-          <span class="time-badge">13:15–13:30</span>
-          <h4>Регистрация биоматериала в лаборатории</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/zhitkova.jpg" alt="Е.Е. Житкова" class="avatar-sm">
-            <div>
-              <strong>Житкова Е.Е.</strong>
-              <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Одинцовская ОКБ». Специалист по интеграции ЛИС и автоматизации</span>
-              <span class="speaker-role">Доклад: Цитологическая диагностика: современные программы и перспективные направления скрининга, хронометраж исследований</span>
-            </div>
-          </div>
-
-          <div class="presentation-download">
-            <a href="presentations/zhitkova-lis.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Цитология -->
-      <div class="slot" data-tags="цитология">
-        <div class="slot-header">
-          <span class="time-badge">13:30–13:45</span>
-          <h4>Цитологическая диагностика</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/vostrikova.jpg" alt="Ж.И. Вострикова" class="avatar-sm">
-            <div>
-              <strong>Вострикова Ж.И.</strong>
-              <span class="speaker-role">заместитель заведующего отдела организации специализированной медицинской помощи взрослому населению Управления специализированной медицинской помощи МЗ МО, член ФЛМ, РООП, EFLM, АКЦР, NATH, РООУ; эксперт ФФОМС по ЭКМП в КЛД; магистр экономики</span>
-              <span class="speaker-role">Доклад: Обработка несоответствий и политика возврата или утилизации проб — критерии брака, документооборот и разбор причин ошибок</span>
-            </div>
-          </div>
-
-          <div class="presentation-download">
-            <a href="presentations/vostrikova-cytology.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Доклад: Качество -->
-      <div class="slot" data-tags="качество">
-        <div class="slot-header">
-          <span class="time-badge">13:45–14:00</span>
-          <h4>Обработка несоответствий и политика возврата или утилизации проб</h4>
-          <button class="speaker-toggle" aria-label="Информация о спикере">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="speaker-details">
-          <div class="speaker-card-inline">
-            <img src="img/speakers/ten.jpg" alt="Е.А. Тен" class="avatar-sm">
-            <div>
-              <strong>Тен Е.А.</strong>
-              <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Домодедовская больница»</span>
-              <span class="speaker-role">Автор методических рекомендаций по качеству</span>
-            </div>
-          </div>
-
-          <div class="presentation-download">
-            <a href="presentations/ten-quality.pdf" class="btn btn-small" download style="display: none;">
-              <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
-              Скачать презентацию
-            </a>
-            <span class="pres-status-waiting" id="pres-shchiblykina-status">
-              ⏳ Презентация появится после выступления
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Перерыв -->
-      <div class="slot" data-tags="перерыв">
-        <div class="slot-header">
-          <span class="time-badge">14:00–15:00</span>
-          <h4>Перерыв</h4>
-        </div>
-      </div>
-
-      <!-- Пленарка -->
-      <div class="slot" data-tags="пленарка">
-        <div class="slot-header">
-          <span class="time-badge">15:00–16:30</span>
-          <h4>Пленарное заседание</h4>
-        </div>
-        <div class="slot-description">Выступления приглашённых экспертов и дискуссия</div>
-      </div>
-
-      <!-- Закрытие -->
-      <div class="slot" data-tags="закрытие">
-        <div class="slot-header">
-          <span class="time-badge">16:30–16:45</span>
-          <h4>Окончание конференции</h4>
-        </div>
-        <div class="slot-description">Подведение итогов</div>
-      </div>
-
-      <!-- Нетворкинг -->
-      <div class="slot" data-tags="нетворкинг">
-        <div class="slot-header">
-          <span class="time-badge">16:45–18:00</span>
-          <h4>Неформальное общение</h4>
-        </div>
-        <div class="slot-description">Фуршет и нетворкинг с коллегами</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Секция: Эксперты -->
-  <!-- Секция: Ключевые участники -->
-<section id="participants">
+  <section id="program">
     <div class="container">
-      <!-- Эксперты -->
-      <div style="margin-bottom: 80px;">
-        <h2 class="section-title">Приглашённые эксперты</h2>
-        <p class="section-note">
-          Ведущие специалисты России — федеральный уровень
-        </p>
+      <h2 class="section-title">Программа</h2>
+      <p class="section-note" style="text-align: center; max-width: 700px; margin: 0 auto 24px;">
+        Чёткий тайминг, ключевые темы и возможность узнать больше о каждом спикере.
+      </p>
 
-        <div class="cards-grid">
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Годков М.А.</h4>
-            <div class="badge-sm">РМАНПО</div>
-            <p class="section-note" style="margin: 12px 0 0;">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
+      <div class="timeline" id="timeline">
+
+        <!-- Регистрация -->
+        <div class="slot" data-tags="организация">
+          <div class="slot-header">
+            <span class="time-badge">11:00–12:00</span>
+            <h4>Регистрация участников</h4>
+          </div>
+        </div>
+
+        <!-- Открытие -->
+        <div class="slot" data-tags="открытие">
+          <div class="slot-header">
+            <span class="time-badge">12:00–12:30</span>
+            <h4>Открытие конференции</h4>
           </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Иванов А.М.</h4>
-            <div class="badge-sm">ФЛМ, РАН</div>
-            <p class="section-note" style="margin: 12px 0 0;">Президент ФЛМ, профессор, член-корр. РАН</p>
+          <!-- Приветственное слово -->
+          <div class="speaker-group">
+            <p><strong>Приветственное слово:</strong></p>
+            <div class="speaker-card-inline" style="margin-top: 8px;">
+              <img src="img/speakers/zabelin.jpg" alt="Максим Забелин" class="avatar-sm">
+              <div>
+                <strong>Забелин Максим</strong>
+                <span class="speaker-role">Заместитель Председателя Правительства Московской области – министр здравоохранения МО</span>
+              </div>
+            </div>
           </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/priputnevich.jpg" alt="Татьяна Припутневич" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Припутневич Т.В.</h4>
-            <div class="badge-sm">НМИЦ АГиП</div>
-            <p class="section-note" style="margin: 12px 0 0;">Главный внештатный микробиолог Минздрава РФ</p>
-          </div>
+          <!-- Вступительное слово -->
+          <div class="speaker-group" style="margin-top: 16px;">
+            <p><strong>Вступительное слово:</strong></p>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/voronkov.jpg" alt="Алексей Воронков" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Воронков А.А.</h4>
-            <div class="badge-sm">Волгоград</div>
-            <p class="section-note" style="margin: 12px 0 0;">Главврач по КЛД, директор медцентра</p>
-          </div>
+            <!-- Михаил Годков -->
+            <div class="speaker-card-inline" style="margin: 8px 0;">
+              <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-sm">
+              <div>
+                <strong>Годков Михаил</strong>
+                <span class="speaker-role">Зав. кафедрой КЛД, РМАНПО</span>
+                <span class="speaker-role">Врач НИИ им. Склифосовского</span>
+              </div>
+            </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/lambakakhar.jpg" alt="Мария Ламбакахар" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Ламбакахар М.Г.</h4>
-            <div class="badge-sm">РМАНПО</div>
-            <p class="section-note" style="margin: 12px 0 0;">К.м.н., доцент кафедры КЛД</p>
+            <!-- Андрей Иванов -->
+            <div class="speaker-card-inline" style="margin: 8px 0;">
+              <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-sm">
+              <div>
+                <strong>Иванов Андрей</strong>
+                <span class="speaker-role">Президент ФЛМ, член-корр. РАН</span>
+                <span class="speaker-role">Профессор, зав. кафедрой КБиЛД, ВМА им. Кирова</span>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/kalacheva.jpg" alt="Ольга Калачева" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Калачева О.С.</h4>
-            <div class="badge-sm">МЕДСИ</div>
-            <p class="section-note" style="margin: 12px 0 0;">Руководитель единой КДЛ ГК «МЕДСИ»</p>
+        <!-- Доклад: Централизация -->
+        <div class="slot" data-tags="центр">
+          <div class="slot-header">
+            <span class="time-badge">12:30–12:45</span>
+            <h4>Централизация лабораторной службы Московской области</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
           </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/sheblykina.jpg" alt="И.В. Щеблыкина-Монастырёва" class="avatar-sm">
+              <div>
+                <strong>Щеблыкина-Монастырёва И.В.</strong>
+                <span class="speaker-role">Главный внештатный специалист по клинической лабораторной диагностике Минздрава МО</span>
+                <span class="speaker-topic">Тема доклада: Стратегия централизации — этапы, результаты, планы</span>
+              </div>
+            </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/sunzova.jpg" alt="Инна Сунцова" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Сунцова И.Г.</h4>
-            <div class="badge-sm">ФЛМ, МО</div>
-            <p class="section-note" style="margin: 12px 0 0;">Председатель Регкомитета ФЛМ по МО</p>
+            <div class="presentation-download">
+              <a href="presentations/shchiblykina-centralization.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-shchiblykina-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
           </div>
+        </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/shatokhina.jpg" alt="Светлана Шатохина" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Шатохина С.Н.</h4>
-            <div class="badge-sm">МОНИКИ</div>
-            <p class="section-note" style="margin: 12px 0 0;">Профессор, зав. кафедрой КЛД МОНИКИ</p>
+        <!-- Доклад: Стандартизация -->
+        <div class="slot" data-tags="стандарты">
+          <div class="slot-header">
+            <span class="time-badge">12:45–13:00</span>
+            <h4>Стандартизация взятия и маркировки проб</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
           </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/kosenko.jpg" alt="О.А. Косенко" class="avatar-sm">
+              <div>
+                <strong>Косенко О.А.</strong>
+                <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Балашихинская больница»</span>
+                <span class="speaker-topic">Тема доклада: Единые протоколы взятия — контроль идентификации, штрихкоды, обучение</span>
+              </div>
+            </div>
 
-          <div class="card-panel" style="text-align: center; padding: 24px;">
-            <img src="img/experts/kudryavtseva.jpg" alt="Лариса Кудрявцева" class="avatar-lg">
-            <h4 style="margin: 16px 0 8px; color: var(--accent);">Кудрявцева Л.В.</h4>
-            <div class="badge-sm">7 ЛЦ МНПЦЛИ</div>
-            <p class="section-note" style="margin: 12px 0 0;">Зав. лабораторией КДЛ 7 Лабораторного центра</p>
+            <div class="presentation-download">
+              <a href="presentations/kosenko-standardization.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-kosenko-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
           </div>
-        </div>      
+        </div>
+
+        <!-- Доклад: Логистика -->
+        <div class="slot" data-tags="логистика">
+          <div class="slot-header">
+            <span class="time-badge">13:00–13:15</span>
+            <h4>Маршрутизация биоматериала</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/izvekova.jpg" alt="М.С. Извекова" class="avatar-sm">
+              <div>
+                <strong>Извекова М.С.</strong>
+                <span class="speaker-role">Руководитель службы диагностики, ГБУЗ МО «Истринская КБ»</span>
+                <span class="speaker-topic">Тема доклада: Логистика транспортировки — контроль температур, сроки доставки, маршруты</span>
+              </div>
+            </div>
+
+            <div class="presentation-download">
+              <a href="presentations/izvekova-logistics.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-izvekova-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Доклад: Регистрация проб -->
+        <div class="slot" data-tags="процессы">
+          <div class="slot-header">
+            <span class="time-badge">13:15–13:30</span>
+            <h4>Регистрация биоматериала в лаборатории</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/zhitkova.jpg" alt="Е.Е. Житкова" class="avatar-sm">
+              <div>
+                <strong>Житкова Е.Е.</strong>
+                <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Одинцовская ОКБ»</span>
+                <span class="speaker-topic">Тема доклада: Интеграция ЛИС — автоматизация приёмки, первичная валидация данных</span>
+              </div>
+            </div>
+
+            <div class="presentation-download">
+              <a href="presentations/zhitkova-lis.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-zhitkova-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Доклад: Цитология -->
+        <div class="slot" data-tags="цитология">
+          <div class="slot-header">
+            <span class="time-badge">13:30–13:45</span>
+            <h4>Цитологическая диагностика</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/vostrikova.jpg" alt="Ж.И. Вострикова" class="avatar-sm">
+              <div>
+                <strong>Вострикова Ж.И.</strong>
+                <span class="speaker-role">Зам. зав. отделом спецмедпомощи МЗ МО, эксперт ФФОМС, EFLM, NATH</span>
+                <span class="speaker-topic">Тема доклада: Современные программы скрининга, хронометраж исследований</span>
+              </div>
+            </div>
+
+            <div class="presentation-download">
+              <a href="presentations/vostrikova-cytology.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-vostrikova-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Доклад: Качество -->
+        <div class="slot" data-tags="качество">
+          <div class="slot-header">
+            <span class="time-badge">13:45–14:00</span>
+            <h4>Обработка несоответствий и политика возврата или утилизации проб</h4>
+            <button class="speaker-toggle" aria-label="Информация о спикере">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12V4M4 8H12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="speaker-details">
+            <div class="speaker-card-inline">
+              <img src="img/speakers/ten.jpg" alt="Е.А. Тен" class="avatar-sm">
+              <div>
+                <strong>Тен Е.А.</strong>
+                <span class="speaker-role">Зав. КДЛ, ГБУЗ МО «Домодедовская больница»</span>
+                <span class="speaker-topic">Тема доклада: Критерии брака, документооборот, анализ причин ошибок</span>
+              </div>
+            </div>
+
+            <div class="presentation-download">
+              <a href="presentations/ten-quality.pdf" class="btn btn-small" download style="display: none;">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/><path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/></svg>
+                Скачать презентацию
+              </a>
+              <span class="pres-status-waiting" id="pres-ten-status">
+                ⏳ Презентация появится после выступления
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Перерыв -->
+        <div class="slot" data-tags="перерыв">
+          <div class="slot-header">
+            <span class="time-badge">14:00–15:00</span>
+            <h4>Перерыв</h4>
+          </div>
+        </div>
+
+        <!-- Пленарка -->
+        <div class="slot" data-tags="пленарка">
+          <div class="slot-header">
+            <span class="time-badge">15:00–16:30</span>
+            <h4>Пленарное заседание</h4>
+          </div>
+          <div class="slot-description">Выступления приглашённых экспертов и дискуссия</div>
+        </div>
+
+        <!-- Закрытие -->
+        <div class="slot" data-tags="закрытие">
+          <div class="slot-header">
+            <span class="time-badge">16:30–16:45</span>
+            <h4>Окончание конференции</h4>
+          </div>
+          <div class="slot-description">Подведение итогов</div>
+        </div>
+
+        <!-- Нетворкинг -->
+        <div class="slot" data-tags="нетворкинг">
+          <div class="slot-header">
+            <span class="time-badge">16:45–18:00</span>
+            <h4>Неформальное общение</h4>
+          </div>
+          <div class="slot-description">Фуршет и нетворкинг с коллегами</div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Секция: Информация для гостей - ПЕРЕРАБОТАНА -->
+  <!-- Секция: Участники -->
+  <section id="participants">
+    <div class="container">
+      <h2 class="section-title">Приглашённые эксперты</h2>
+      <p class="section-note">
+        Ведущие специалисты России — федеральный уровень
+      </p>
+
+      <div class="cards-grid">
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/godkov.jpg" alt="Михаил Годков" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Годков М.А.</h4>
+          <div class="badge-sm">РМАНПО</div>
+          <p class="section-note" style="margin: 12px 0 0;">Зав. кафедрой КЛД, врач НИИ им. Склифосовского</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/ivanov.jpg" alt="Андрей Иванов" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Иванов А.М.</h4>
+          <div class="badge-sm">ФЛМ, РАН</div>
+          <p class="section-note" style="margin: 12px 0 0;">Президент ФЛМ, профессор, член-корр. РАН</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/priputnevich.jpg" alt="Татьяна Припутневич" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Припутневич Т.В.</h4>
+          <div class="badge-sm">НМИЦ АГиП</div>
+          <p class="section-note" style="margin: 12px 0 0;">Главный внештатный микробиолог Минздрава РФ</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/voronkov.jpg" alt="Алексей Воронков" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Воронков А.А.</h4>
+          <div class="badge-sm">Волгоград</div>
+          <p class="section-note" style="margin: 12px 0 0;">Главврач по КЛД, директор медцентра</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/lambakakhar.jpg" alt="Мария Ламбакахар" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Ламбакахар М.Г.</h4>
+          <div class="badge-sm">РМАНПО</div>
+          <p class="section-note" style="margin: 12px 0 0;">К.м.н., доцент кафедры КЛД</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/kalacheva.jpg" alt="Ольга Калачева" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Калачева О.С.</h4>
+          <div class="badge-sm">МЕДСИ</div>
+          <p class="section-note" style="margin: 12px 0 0;">Руководитель единой КДЛ ГК «МЕДСИ»</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/sunzova.jpg" alt="Инна Сунцова" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Сунцова И.Г.</h4>
+          <div class="badge-sm">ФЛМ, МО</div>
+          <p class="section-note" style="margin: 12px 0 0;">Председатель Регкомитета ФЛМ по МО</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/shatokhina.jpg" alt="Светлана Шатохина" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Шатохина С.Н.</h4>
+          <div class="badge-sm">МОНИКИ</div>
+          <p class="section-note" style="margin: 12px 0 0;">Профессор, зав. кафедрой КЛД МОНИКИ</p>
+        </div>
+
+        <div class="card-panel" style="text-align: center; padding: 24px;">
+          <img src="img/experts/kudryavtseva.jpg" alt="Лариса Кудрявцева" class="avatar-lg">
+          <h4 style="margin: 16px 0 8px; color: var(--accent);">Кудрявцева Л.В.</h4>
+          <div class="badge-sm">7 ЛЦ МНПЦЛИ</div>
+          <p class="section-note" style="margin: 12px 0 0;">Зав. лабораторией КДЛ 7 Лабораторного центра</p>
+        </div>
+      </div>      
+    </div>
+  </section>
+
+  <!-- Секция: Информация для гостей -->
   <section id="info">
     <div class="container">
       <h2 class="section-title">Информация для гостей</h2>
 
-      <!-- Верхний ряд: Проход и площадка + Карта -->
       <div class="grid2 gap-24" style="margin-bottom: 40px;">
-        <!-- Левый блок: Проход и площадка + Удобства -->
         <div>
           <div class="card-panel" style="margin-bottom: 24px;">
             <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
@@ -565,14 +555,13 @@
               <h3 style="color: var(--accent); margin: 0;">Удобства</h3>
             </div>
             <ul style="padding-left: 20px; line-height: 1.6; margin: 0;">
-              <li><strong>3 этаж:</strong> кафетерий </li>
-              <li><strong>2 этаж:</strong> столовая </li>
-              <strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
+              <li><strong>3 этаж:</strong> кафетерий — кофе, перекус</li>
+              <li><strong>2 этаж:</strong> столовая — полноценный обед</li>
+              <li><strong>Кофе-брейк:</strong> 15:00–15:30, зона регистрации</li>
             </ul>
           </div>
         </div>
 
-        <!-- Правый блок: Карта -->
         <div class="card-panel" style="height: fit-content;">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
             <div style="font-size: 24px;">🗺️</div>
@@ -596,7 +585,6 @@
         </div>
       </div>
 
-      <!-- Нижний ряд: FAQ по центру -->
       <div style="max-width: 800px; margin: 0 auto;">
         <div class="card-panel">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; justify-content: center;">
@@ -622,41 +610,43 @@
       </div>
     </div>
   </section>
+
   <!-- Подвал -->
   <footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <strong>Организаторы</strong>
-        <p class="footer-text">
-          Министерство здравоохранения<br>
-          Московской области
-        </p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <strong>Организаторы</strong>
+          <p class="footer-text">
+            Министерство здравоохранения<br>
+            Московской области
+          </p>
+        </div>
+        <div class="footer-col">
+          <strong>Партнёр проекта</strong>
+          <p class="footer-text">
+            ГКУ МО «Центр внедрения<br>
+            изменений Московской области»
+          </p>
+        </div>
+        <div class="footer-col">
+          <strong>Контакты</strong>
+          <p class="footer-text">
+            📧 ScheblykinaIV@mosreg.ru<br>
+            📞 +7 (995) 883-23-36 - Ирина Владимировна
+          </p>
+        </div>
       </div>
-      <div class="footer-col">
-        <strong>Партнёр проекта</strong>
-        <p class="footer-text">
-          ГКУ МО «Центр внедрения<br>
-          изменений Московской области»
-        </p>
-      </div>
-      <div class="footer-col">
-        <strong>Контакты</strong>
-        <p class="footer-text">
-          📧 ScheblykinaIV@mosreg.ru<br>
-          📞 +7 (995) 883-23-36 - Ирина Владимировна
-        </p>
-      </div>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-copyright">
+        © 2025 · Конференция «Лабораторная медицина Подмосковья»<br>
+        Все права защищены.
+      </p>
     </div>
+  </footer>
 
-    <div class="footer-divider"></div>
-
-    <p class="footer-copyright">
-      © 2025 · Конференция «Лабораторная медицина Подмосковья»<br>
-      Все права защищены.
-    </p>
-  </div>
-</footer>
   <!-- Скрипт -->
   <script src="script.js"></script>
 </body>
