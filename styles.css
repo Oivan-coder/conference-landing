@@ -90,11 +90,11 @@ a:hover {
   height: 40px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 50%; /* Делаем лого круглым! */
-  border: 2px solid var(--accent); /* Добавляем обводку акцентным цветом */
-  padding: 3px; /* Немного отступа внутри круга */
-  background: #0b1326; /* Фон внутри круга */
-  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.2); /* Лёгкое свечение */
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  padding: 3px;
+  background: #0b1326;
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.2);
 }
 
 .brand-text {
@@ -185,7 +185,7 @@ a:hover {
   transform: translateY(-6px) rotate(-45deg);
 }
 
-/* === ГЕРОЙ СЕКЦИЯ: Исправляем выравнивание === */
+/* === ГЕРОЙ СЕКЦИЯ === */
 .hero .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -193,12 +193,10 @@ a:hover {
   align-items: center;
 }
 
-/* Десктоп: две колонки */
-@media (min-width: 968px) { /* Увеличил планку до 968px для лучшего перехода */
+@media (min-width: 968px) {
   .hero .grid {
-    grid-template-columns: 1.1fr 0.9fr; /* Текст занимает чуть больше места */
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
-    text-align: left; /* Выравниваем весь текст по левому краю */
   }
   
   .hero-content {
@@ -206,19 +204,8 @@ a:hover {
     flex-direction: column;
     justify-content: center;
   }
-  
-  /* Принудительно выравниваем элементы по левому краю на десктопе */
-  .kicker,
-  .onsite-banner,
-  .hero-cta,
-  .meta,
-  .countdown {
-    justify-content: flex-start !important;
-    text-align: left !important;
-  }
 }
 
-/* Элементы, которые должны быть по центру на мобильном и по левому краю на десктопе */
 .kicker {
   display: flex;
   flex-wrap: wrap;
@@ -267,39 +254,20 @@ a:hover {
   flex-wrap: wrap;
 }
 
-/* Десктоп: выравниваем по левому краю */
+/* Десктоп: выравнивание по левому краю */
 @media (min-width: 968px) {
-  .kicker {
-    justify-content: flex-start;
-  }
-  
-  .onsite-banner {
-    text-align: left;
-    margin: 0 0 20px 0;
-  }
-  
-  .hero-cta {
-    justify-content: flex-start;
-  }
-  
-  .meta {
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-    gap: 16px;
-  }
-  
-  .countdown {
-    justify-content: flex-start;
-  }
+  .kicker { justify-content: flex-start; }
+  .onsite-banner { text-align: left; margin: 0 0 20px 0; }
+  .hero-cta { justify-content: flex-start; }
+  .meta { flex-direction: row; justify-content: flex-start; text-align: left; gap: 16px; }
+  .countdown { justify-content: flex-start; }
 }
 
-/* Увеличиваем изображение на десктопе */
 .hero-image img {
   width: 100%;
-  max-width: 560px; /* Увеличил максимальную ширину */
+  max-width: 560px;
   height: auto;
-  border-radius: 20px; /* Увеличил радиус скругления */
+  border-radius: 20px;
   display: block;
   margin: 0 auto;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
@@ -317,21 +285,12 @@ a:hover {
   color: var(--muted);
 }
 
-/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ === */
+/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ === */
 @media (max-width: 767px) {
-  .nav-inner {
-    padding: 10px 16px;
-  }
+  .nav-inner { padding: 10px 16px; }
+  .brand-title { font-size: 1.2rem; }
+  .brand-subtitle { font-size: 0.7rem; }
 
-  .brand-title {
-    font-size: 1.2rem;
-  }
-
-  .brand-subtitle {
-    font-size: 0.7rem;
-  }
-
-  /* Мобильное меню */
   .nav-links {
     display: none;
     position: absolute;
@@ -349,9 +308,7 @@ a:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
 
-  .nav-links.active {
-    display: flex;
-  }
+  .nav-links.active { display: flex; }
 
   .nav-links a {
     padding: 14px 16px;
@@ -359,72 +316,35 @@ a:hover {
     margin-bottom: 4px;
   }
 
-  .nav-links a:last-child {
-    margin-bottom: 0;
-  }
+  .nav-links a:last-child { margin-bottom: 0; }
 
-  .nav-burger {
-    display: flex;
-  }
-  
-  /* Уменьшаем отступы в герое на мобильных */
-  .hero {
-    padding: 40px 0 30px;
-  }
-  
-  .hero .grid {
-    gap: 30px;
-  }
-  
-  .title {
-    font-size: 32px;
-  }
-  
+  .nav-burger { display: flex; }
+
+  .hero { padding: 40px 0 30px; }
+  .hero .grid { gap: 30px; }
+  .title { font-size: 32px; }
+
   .hero-cta {
     flex-direction: column;
   }
-  
+
   .hero-cta .btn {
     width: 100%;
+    display: flex;
     justify-content: center;
   }
-  
-  .meta {
-    gap: 12px;
-  }
-  
-  .meta span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+
+  .meta { gap: 12px; }
+  .meta span { display: flex; align-items: center; gap: 6px; }
 }
 
-/* Для очень маленьких экранов */
 @media (max-width: 360px) {
-  .brand-text {
-    display: none;
-  }
-  
-  .title {
-    font-size: 28px;
-  }
-  
-  .countdown {
-    gap: 6px;
-  }
-  
-  .cd-box {
-    min-width: 56px;
-    padding: 6px 4px;
-  }
-  
-  .cd-num {
-    font-size: 18px;
-  }
+  .brand-text { display: none; }
+  .title { font-size: 28px; }
+  .countdown { gap: 6px; }
+  .cd-box { min-width: 56px; padding: 6px 4px; }
+  .cd-num { font-size: 18px; }
 }
-
-
 
 /* === Section Titles & Notes === */
 .section-title,
@@ -449,7 +369,6 @@ a:hover {
   line-height: 1.5;
 }
 
-/* На десктопе — только если родитель требует, можно выровнять по левому краю */
 @media (min-width: 768px) {
   #about .section-title,
   #about .section-note,
@@ -465,7 +384,7 @@ a:hover {
   }
 }
 
-/* === Card Panels (общие карточки) === */
+/* === Card Panels === */
 .card-panel {
   background: #0b1326;
   border: 1px solid var(--line);
@@ -511,7 +430,6 @@ a:hover {
   }
 }
 
-/* Карточка эксперта — отдельный класс, чтобы не конфликтовать с другими card-panel */
 .expert-card {
   background: #0b1326;
   border: 1px solid var(--line);
@@ -699,7 +617,8 @@ details summary {
   cursor: pointer;
   padding: 8px 0;
 }
-/* === Кнопки === */
+
+/* === КНОПКИ === */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -728,7 +647,6 @@ details summary {
   outline-offset: 2px;
 }
 
-/* Прозрачная кнопка с обводкой */
 .btn.btn-outline {
   background: transparent;
   color: var(--accent);
@@ -741,7 +659,6 @@ details summary {
   color: #1ec9dd;
 }
 
-/* Маленькая кнопка (для скачивания презентаций) */
 .btn.btn-small {
   padding: 6px 12px;
   font-size: 13px;
@@ -752,7 +669,8 @@ details summary {
   width: 14px;
   height: 14px;
 }
-/* === FOOTER: Apple-style переделка === */
+
+/* === FOOTER === */
 .footer {
   padding: 70px 0 40px;
   color: var(--muted);
@@ -763,7 +681,6 @@ details summary {
   font-weight: 350;
 }
 
-/* Тонкая градиентная линия сверху */
 .footer::before {
   content: '';
   position: absolute;
@@ -857,7 +774,6 @@ details summary {
   font-weight: 350;
 }
 
-/* Контакты */
 .footer-contacts {
   display: flex;
   flex-direction: column;
@@ -915,14 +831,12 @@ details summary {
   margin-top: 4px;
 }
 
-/* Разделитель */
 .footer-divider {
   height: 0.5px;
   background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.15), transparent);
   width: 100%;
 }
 
-/* Копирайт */
 .footer-copyright {
   text-align: center;
   font-size: 13px;
@@ -939,53 +853,26 @@ details summary {
   font-weight: 300;
 }
 
-/* Адаптивность для мобильных */
 @media (max-width: 767px) {
-  .footer {
-    padding: 50px 0 30px;
-  }
-  
-  .footer-main {
-    gap: 28px;
-  }
-  
-  .footer-block {
-    gap: 14px;
-  }
-  
-  .footer-logo {
-    width: 50px;
-    height: 50px;
-  }
+  .footer { padding: 50px 0 30px; }
+  .footer-main { gap: 28px; }
+  .footer-block { gap: 14px; }
+  .footer-logo { width: 50px; height: 50px; }
 }
 
-/* Анимация появления при скролле */
+/* Анимация появления */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .footer > .container > * {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.footer-partners {
-  animation-delay: 0.1s;
-}
-
-.footer-divider {
-  animation-delay: 0.2s;
-}
-
-.footer-copyright {
-  animation-delay: 0.3s;
-}
+.footer-partners { animation-delay: 0.1s; }
+.footer-divider { animation-delay: 0.2s; }
+.footer-copyright { animation-delay: 0.3s; }
 
 /* === Progress Bar === */
 .progress {
