@@ -613,101 +613,63 @@
   </section>
 
   <!-- Подвал -->
-  <!-- Подвал -->
   <footer>
-    <div class="container">
-      <!-- Сетка: организатор + партнёр + контакты -->
-      <div class="footer-grid" style="
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-      ">
-
-      <!-- Организатор с логотипом -->
-        <div class="footer-col" style="
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          gap: 16px;
-          padding: 12px 0;
-        ">
+  <div class="container">
+    <!-- Основная сетка футера -->
+    <div class="footer-grid">
+      
+      <!-- Блок организатора -->
+      <div class="footer-col">
+        <div class="footer-org">
           <img 
             src="img/logos/logo-minzdrav-mo.png" 
             alt="Министерство здравоохранения МО" 
-            style="
-              width: 60px;
-              height: 60px;
-              object-fit: contain;
-              filter: brightness(1.1);
-              border-radius: 8px;
-              background: #0b1326;
-              padding: 4px;
-              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            "
+            class="footer-logo"
           >
-          <div style="text-align: left;">
-            <strong style="color: var(--accent);">Организатор</strong>
-            <p class="footer-text" style="margin: 8px 0 0;">
-              Министерство здравоохранения<br>Московской области
-            </p>
+          <div class="footer-org-info">
+            <span class="footer-label">Организатор</span>
+            <p class="footer-text">Министерство здравоохранения<br>Московской области</p>
           </div>
         </div>
+      </div>
 
-      <!-- Партнёр проекта с логотипом -->
-        <div class="footer-col" style="
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          gap: 16px;
-          padding: 12px 0;
-        ">
+      <!-- Блок партнёра -->
+      <div class="footer-col">
+        <div class="footer-org">
           <img 
             src="img/logos/logo-cviom.png" 
             alt="ГКУ МО «Центр внедрения изменений»" 
-            style="
-              width: 60px;
-              height: 60px;
-              object-fit: contain;
-              filter: brightness(1.1);
-              border-radius: 8px;
-              background: #0b1326;
-              padding: 4px;
-              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            "
+            class="footer-logo"
           >
-          <div style="text-align: left;">
-            <strong style="color: var(--accent);">Партнёр проекта</strong>
-            <p class="footer-text" style="margin: 8px 0 0;">
-              ГКУ МО «Центр внедрения<br>изменений Московской области»
-            </p>
+          <div class="footer-org-info">
+            <span class="footer-label">Партнёр проекта</span>
+            <p class="footer-text">ГКУ МО «Центр внедрения<br>изменений Московской области»</p>
           </div>
         </div>
+      </div>
 
-      <!-- Контакты без логотипа -->
-        <div class="footer-col" style="justify-content: center; gap: 8px;">
-          <strong style="color: var(--accent);">Контакты</strong>
-          <p class="footer-text" style="margin: 0;">
-            📧 ScheblykinaIV@mosreg.ru<br>
-            📞 +7 (995) 883-23-36 - Ирина Владимировна
+      <!-- Блок контактов -->
+      <div class="footer-col">
+        <div class="footer-contact">
+          <span class="footer-label">Контакты</span>
+          <p class="footer-text">
+            <span class="contact-line">📧 ScheblykinaIV@mosreg.ru</span>
+            <span class="contact-line">📞 +7 (995) 883-23-36</span>
+            <span class="contact-person">Ирина Владимировна</span>
           </p>
         </div>
-
-      <!-- Разделитель -->
-        <div class="footer-divider" style="margin: 24px auto; width: 80%;"></div>
-
-      <!-- Copyright -->
-        <p class="footer-copyright" style="text-align: center; margin: 0; color: var(--muted); font-size: 13px;">
-          © 2025 · Конференция «Лабораторная медицина Подмосковья»<br>
-          Все права защищены.
-        </p>
       </div>
     </div>
-  </footer>
+
+    <!-- Разделитель -->
+    <div class="footer-divider"></div>
+
+    <!-- Копирайт -->
+    <div class="footer-copyright">
+      <p>© 2025 Конференция «Лабораторная медицина Подмосковья»<br>Все права защищены.</p>
+    </div>
+  </div>
+</footer>
   <!-- Скрипт -->
   <script src="script.js"></script>
 
