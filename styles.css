@@ -48,7 +48,7 @@ a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px; /* Уменьшено для мобильных */
+  padding: 0 16px;
 }
 
 /* === NAV === */
@@ -365,17 +365,6 @@ section.visible {
   position: relative;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
-  opacity: 0.3;
-}
-
 .slot {
   background: rgba(11, 19, 38, 0.7);
   border: 1px solid var(--line);
@@ -384,19 +373,6 @@ section.visible {
   position: relative;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-}
-
-.slot::before {
-  content: '';
-  position: absolute;
-  left: 8px;
-  top: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--bg);
-  z-index: 1;
 }
 
 .slot-header {
@@ -428,8 +404,8 @@ section.visible {
   background: transparent;
   border: 1px solid var(--line);
   border-radius: 8px;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,32 +432,23 @@ section.visible {
   transform: rotate(45deg);
 }
 
+/* === Карточка спикера — просто и надёжно === */
 .speaker-details {
   display: none;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin: 0 0 0 22px;
-  padding: 0;
-  transition: all 0.4s ease-out;
-}
-
-.speaker-details.active {
-  display: block;
-  opacity: 1;
-  max-height: 200px;
   margin: 12px 0 0;
   padding: 12px;
+  background: rgba(11, 19, 38, 0.5);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .speaker-card-inline {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  background: rgba(11, 19, 38, 0.5);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 12px;
 }
 
 .avatar-sm {
@@ -577,13 +544,4 @@ footer {
   width: 0;
   z-index: 60;
   transition: width 0.05s ease;
-}
-
-/* === PREFER REDUCED MOTION === */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }
