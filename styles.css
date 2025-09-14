@@ -1173,3 +1173,47 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+/* === Исправление контактов в футере === */
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.contact-person {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Адаптив для контактов */
+@media (max-width: 768px) {
+  .footer-contacts {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-contacts {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
