@@ -1097,7 +1097,9 @@ a:hover {
   .nav-burger {
     display: flex;
   }
-  /* === АДАПТИВ ДЛЯ БЛОКА ИНФОРМАЦИИ ДЛЯ ГОСТЕЙ === */
+} /* Закрывающая скобка для мобильного меню */
+
+/* === АДАПТИВ ДЛЯ БЛОКА ИНФОРМАЦИИ ДЛЯ ГОСТЕЙ === */
 @media (max-width: 768px) {
   .info-grid {
     grid-template-columns: 1fr;
@@ -1170,5 +1172,4 @@ a:hover {
   .faq-list-compact p {
     font-size: 0.9rem;
   }
-}
 }
