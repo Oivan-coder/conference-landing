@@ -1097,4 +1097,78 @@ a:hover {
   .nav-burger {
     display: flex;
   }
+  /* === АДАПТИВ ДЛЯ БЛОКА ИНФОРМАЦИИ ДЛЯ ГОСТЕЙ === */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .info-cards {
+    order: 1;
+  }
+  
+  .map-panel {
+    order: 2;
+  }
+  
+  .large-map {
+    height: 300px;
+  }
+  
+  .faq-compact {
+    order: 3;
+    margin-top: 1.5rem;
+  }
+  
+  /* Улучшения для мобильных карточек */
+  .card-panel {
+    padding: 1.25rem;
+  }
+  
+  .card-header {
+    margin-bottom: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .card-header .card-icon {
+    font-size: 1.5rem;
+  }
+  
+  .card-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  .list li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+}
+
+/* Дополнительные улучшения для очень маленьких экранов */
+@media (max-width: 480px) {
+  .large-map {
+    height: 250px;
+  }
+  
+  .card-panel {
+    padding: 1rem;
+  }
+  
+  .coffee-break-note {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .faq-list-compact summary {
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .faq-list-compact p {
+    font-size: 0.9rem;
+  }
+}
 }
