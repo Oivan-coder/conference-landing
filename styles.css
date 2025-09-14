@@ -968,20 +968,6 @@ a:hover {
   margin: 0;
 }
 
-.contact-icons {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-.contact-info {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .contact-info {
-    text-align: left;
-  }
-}
 
 .contact-link {
   color: #cbd5e1;
