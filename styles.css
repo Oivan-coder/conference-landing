@@ -1,3 +1,8 @@
+полмоги с футером, вот стили, поправиь расположение лого и наименование организаций
+хочу чтобы былло 
+лого - организация.  лого -организаицяю.  котанктные данные
+
+И чтобы лого было поцетру наименования
 /* === БАЗОВЫЕ ПЕРЕМЕННЫЕ === */
 :root {
   --bg: #0f172a;
@@ -910,30 +915,27 @@ a:hover {
 
 @media (min-width: 768px) {
   .footer-main {
-    grid-template-columns: 1fr 1fr 2fr; /* Два партнёра, одна колонка контактов */
+    grid-template-columns: repeat(3, 1fr);
     text-align: left;
-    align-items: start;
+    gap: 32px;
   }
 }
 
-/* Общий контейнер для лого + название */
-.org-pair {
+.footer-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 @media (min-width: 768px) {
-  .org-pair {
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    text-align: left;
+  .footer-block {
+    align-items: flex-start;
+    gap: 16px;
   }
 }
 
-.org-logo {
+.footer-logo {
   width: 60px;
   height: 60px;
   border-radius: 12px;
@@ -943,57 +945,65 @@ a:hover {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.org-logo:hover {
+.footer-logo:hover {
   filter: grayscale(0%) brightness(140%);
   transform: scale(1.05);
   border-color: rgba(34, 211, 238, 0.2);
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.08);
 }
 
-.org-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #e2e8f0;
-  margin: 0;
-  line-height: 1.4;
-}
-
-/* Контакты */
-.footer-contacts {
+.footer-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 4px;
+  gap: 8px;
+}
+
+.footer-label {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.footer-text {
+  color: #e2e8f0;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 280px;
+}
+
+/* Стили для контактов */
+.footer-contacts .footer-info {
+  gap: 12px;
+}
+
+.contact-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 15px;
-  line-height: 1.5;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-icon {
   font-size: 18px;
   width: 24px;
   text-align: center;
-  color: var(--accent);
-  margin-top: 2px;
+  flex-shrink: 0;
 }
 
-.contact-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.contact-link,
-.contact-text {
+.contact-link {
   color: #cbd5e1;
+  transition: all 0.3s ease;
+  font-size: 15px;
   text-decoration: none;
-  transition: color 0.3s ease;
-  margin: 0;
 }
 
 .contact-link:hover {
@@ -1006,7 +1016,9 @@ a:hover {
   font-size: 13px;
   color: #94a3b8;
   font-style: italic;
-  margin: 0;
+  line-height: 1.4;
+  margin-top: 4px;
+  max-width: 280px;
 }
 
 .footer-divider {
@@ -1027,20 +1039,37 @@ a:hover {
   margin-top: 6px;
 }
 
-/* Анимации */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Адаптив для контактов */
+@media (max-width: 768px) {
+  .footer-contacts {
+    align-items: center;
+  }
+  
+  .footer-contacts .footer-info {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-item {
+    justify-content: center;
+  }
 }
 
-.footer > .container > * {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
+@media (min-width: 768px) {
+  .footer-contacts {
+    align-items: flex-start;
+  }
+  
+  .footer-contacts .footer-info {
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .contact-item {
+    justify-content: flex-start;
+  }
 }
 
-.footer-main > * { animation-delay: 0.1s; }
-.footer-divider { animation-delay: 0.2s; }
-.footer-copyright { animation-delay: 0.3s; }
 /* === Progress Bar === */
 .progress {
   position: fixed;
