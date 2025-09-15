@@ -910,27 +910,30 @@ a:hover {
 
 @media (min-width: 768px) {
   .footer-main {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 2fr; /* Два партнёра, одна колонка контактов */
     text-align: left;
-    gap: 32px;
+    align-items: start;
   }
 }
 
-.footer-block {
+/* Общий контейнер для лого + название */
+.org-pair {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 @media (min-width: 768px) {
-  .footer-block {
-    align-items: flex-start;
-    gap: 16px;
+  .org-pair {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
   }
 }
 
-.footer-logo {
+.org-logo {
   width: 60px;
   height: 60px;
   border-radius: 12px;
@@ -940,65 +943,57 @@ a:hover {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.footer-logo:hover {
+.org-logo:hover {
   filter: grayscale(0%) brightness(140%);
   transform: scale(1.05);
   border-color: rgba(34, 211, 238, 0.2);
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.08);
 }
 
-.footer-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-label {
-  color: var(--accent);
-  font-size: 11px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-  opacity: 0.8;
-}
-
-.footer-text {
+.org-name {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #e2e8f0;
-  font-size: 15px;
-  line-height: 1.5;
   margin: 0;
-  max-width: 280px;
+  line-height: 1.4;
 }
 
-/* Стили для контактов */
-.footer-contacts .footer-info {
-  gap: 12px;
-}
-
-.contact-items-wrapper {
+/* Контакты */
+.footer-contacts {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  margin-top: 4px;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .contact-icon {
   font-size: 18px;
   width: 24px;
   text-align: center;
-  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 2px;
 }
 
-.contact-link {
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-link,
+.contact-text {
   color: #cbd5e1;
-  transition: all 0.3s ease;
-  font-size: 15px;
   text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0;
 }
 
 .contact-link:hover {
@@ -1011,9 +1006,7 @@ a:hover {
   font-size: 13px;
   color: #94a3b8;
   font-style: italic;
-  line-height: 1.4;
-  margin-top: 4px;
-  max-width: 280px;
+  margin: 0;
 }
 
 .footer-divider {
@@ -1034,37 +1027,20 @@ a:hover {
   margin-top: 6px;
 }
 
-/* Адаптив для контактов */
-@media (max-width: 768px) {
-  .footer-contacts {
-    align-items: center;
-  }
-  
-  .footer-contacts .footer-info {
-    align-items: center;
-    text-align: center;
-  }
-  
-  .contact-item {
-    justify-content: center;
-  }
+/* Анимации */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (min-width: 768px) {
-  .footer-contacts {
-    align-items: flex-start;
-  }
-  
-  .footer-contacts .footer-info {
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  .contact-item {
-    justify-content: flex-start;
-  }
+.footer > .container > * {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
 }
 
+.footer-main > * { animation-delay: 0.1s; }
+.footer-divider { animation-delay: 0.2s; }
+.footer-copyright { animation-delay: 0.3s; }
 /* === Progress Bar === */
 .progress {
   position: fixed;
