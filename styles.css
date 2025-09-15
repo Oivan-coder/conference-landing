@@ -570,6 +570,11 @@ a:hover {
   position: relative;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  margin-bottom: 16px; /* ← Добавлен отступ между блоками */
+}
+
+.slot:last-child {
+  margin-bottom: 0; /* ← Убираем у последнего, чтобы не было лишнего пустого места */
 }
 
 .slot::before {
@@ -935,7 +940,7 @@ a:hover {
     flex-direction: row;
     gap: 16px;
     align-items: flex-start;
-    min-height: 120px; /* Фиксированная высота для выравнивания */
+    min-height: 120px;
   }
 }
 
@@ -1099,21 +1104,6 @@ a:hover {
     justify-content: flex-start;
   }
 }
-
-/* Анимация появления футера */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.footer > .container > * {
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.footer-main > * { animation-delay: 0.1s; }
-.footer-divider { animation-delay: 0.2s; }
-.footer-copyright { animation-delay: 0.3s; }
 
 /* === Progress Bar === */
 .progress {
