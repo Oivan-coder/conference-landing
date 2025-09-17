@@ -60,13 +60,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // === 4. Кнопки "Спикер" в программе — показ/скрытие карточки ===
+  // === 4. Кнопки "Спикер" в программе — показ/скрытие карточки ===
   document.querySelectorAll('.speaker-details').forEach(el => {
-    el.style.display = 'none';
+  // Проверяем, находится ли блок НЕ внутри пленарного заседания
+    if (!el.closest('.slot[data-tags="пленарка"]')) {
+      el.style.display = 'none';
+    }
   });
 
   document.querySelectorAll('.speaker-toggle').forEach(button => {
     button.addEventListener('click', function () {
-      const details = this.closest('.slot').querySelector('.speaker-details');
+      const slot = this.closest('.slot');
+    // Если это пленарка — ничего не делаем (кнопка будет неактивна)
+      if (slot.hasAttribute('data-tags') && slot.getAttribute('data-tags').includes('пленарка')) {
+        return;
+      }
+      const details = slot.querySelector('.speaker-details');
       const isVisible = details.style.display === 'block';
       details.style.display = isVisible ? 'none' : 'block';
       this.classList.toggle('active', !isVisible);
