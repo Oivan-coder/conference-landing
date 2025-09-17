@@ -2569,3 +2569,8 @@ a:hover {
     font-size: 0.9rem;
   }
 }
+/* === Дополнительное правило для отображения докладов в пленарке === */
+.speaker-details.is-visible {
+  display: block;
+  margin-top: 16px;
+}
