@@ -2574,3 +2574,63 @@ a:hover {
   display: block;
   margin-top: 16px;
 }
+/* === Стили для кнопки Telegram в футере === */
+.contact-item-with-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-actions {
+  display: flex;
+  margin-left: 4px;
+}
+
+.tg-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(34, 156, 238, 0.1);
+  border-radius: 6px;
+  color: #229cee;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.tg-button:hover {
+  background: rgba(34, 156, 238, 0.2);
+  transform: scale(1.05);
+  color: #1a7cc7;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 833px) {
+  .contact-item-with-actions {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .contact-actions {
+    margin-left: 24px; /* Отступ для выравнивания под текстом */
+  }
+  
+  .tg-button {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Улучшение для очень маленьких экранов */
+@media (max-width: 380px) {
+  .contact-item-with-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .contact-actions {
+    margin-left: 0;
+  }
+}
