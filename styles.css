@@ -2355,7 +2355,9 @@ a:hover {
   .footer-info {
     gap: 5px;
   }
-  
+  .footer-info {
+    text-align: center !important;
+  }
   .footer-label {
     font-size: 9px;
   }
