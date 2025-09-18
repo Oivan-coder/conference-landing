@@ -2574,7 +2574,7 @@ a:hover {
   display: block;
   margin-top: 16px;
 }
-/* === Стили для кнопки Telegram в футере === */
+/* === Стили для кнопок мессенджеров в футере === */
 .contact-item-with-actions {
   display: flex;
   align-items: center;
@@ -2583,26 +2583,41 @@ a:hover {
 
 .contact-actions {
   display: flex;
-  margin-left: 4px;
+  gap: 6px;
+  margin-left: 8px;
 }
 
-.tg-button {
+.messenger-button {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
-  background: rgba(34, 156, 238, 0.1);
   border-radius: 6px;
-  color: #229cee;
   transition: all 0.3s ease;
   flex-shrink: 0;
+}
+
+.tg-button {
+  background: rgba(34, 156, 238, 0.1);
+  color: #229cee;
 }
 
 .tg-button:hover {
   background: rgba(34, 156, 238, 0.2);
   transform: scale(1.05);
   color: #1a7cc7;
+}
+
+.wa-button {
+  background: rgba(37, 211, 102, 0.1);
+  color: #25d366;
+}
+
+.wa-button:hover {
+  background: rgba(37, 211, 102, 0.2);
+  transform: scale(1.05);
+  color: #1ea952;
 }
 
 /* Адаптивность для мобильных */
@@ -2614,9 +2629,10 @@ a:hover {
   
   .contact-actions {
     margin-left: 24px; /* Отступ для выравнивания под текстом */
+    gap: 8px;
   }
   
-  .tg-button {
+  .messenger-button {
     width: 26px;
     height: 26px;
   }
@@ -2632,5 +2648,16 @@ a:hover {
   
   .contact-actions {
     margin-left: 0;
+    gap: 6px;
   }
+}
+
+/* Анимация при наведении на кнопки мессенджеров */
+.messenger-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.messenger-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
