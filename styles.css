@@ -2620,24 +2620,6 @@ a:hover {
   color: #1ea952;
 }
 
-/* Адаптивность для мобильных */
-@media (max-width: 833px) {
-  .contact-item-with-actions {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  
-  .contact-actions {
-    margin-left: 24px; /* Отступ для выравнивания под текстом */
-    gap: 8px;
-  }
-  
-  .messenger-button {
-    width: 26px;
-    height: 26px;
-  }
-}
-
 /* Улучшение для очень маленьких экранов */
 @media (max-width: 380px) {
   .contact-item-with-actions {
@@ -2648,7 +2630,7 @@ a:hover {
   
   .contact-actions {
     margin-left: 0;
-    gap: 6px;
+    gap: 10px;
   }
 }
 
