@@ -1432,3 +1432,39 @@ a:hover {
   box-shadow: 0 4px 12px rgba(34, 211, 238, 0.4);
   transition: all 0.2s ease;
 }
+/* === ЦЕНТРИРОВАНИЕ ТЕЛЕФОННЫХ НОМЕРОВ НА МОБИЛЬНЫХ === */
+@media (max-width: 768px) {
+  .contact-item-with-actions {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-actions {
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .contact-person {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Дополнительное правило для гарантии центрирования */
+@media (max-width: 768px) {
+  .footer-contacts .footer-info {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact-link {
+    display: block;
+    text-align: center;
+  }
+}
