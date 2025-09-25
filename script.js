@@ -218,6 +218,7 @@ END:VCALENDAR`;
   const presentations = [
     { statusId: "pres-shchiblykina-status", url: "presentations/shchiblykina-centralization.pdf" },
     { statusId: "pres-kosenko-status", url: "presentations/kosenko-standardization.pdf" },
+    { statusId: "pres-gisharova-status", url: "presentations/gisharova.pdf" },
     { statusId: "pres-izvekova-status", url: "presentations/izvekova-logistics.pdf" },
     { statusId: "pres-zhitkova-status", url: "presentations/zhitkova-lis.pdf" },
     { statusId: "pres-vostrikova-status", url: "presentations/vostrikova-cytology.pdf" },
