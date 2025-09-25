@@ -221,6 +221,10 @@ END:VCALENDAR`;
     { statusId: "pres-gisharova-status", url: "presentations/gisharova.pdf" },
     { statusId: "pres-izvekova-status", url: "presentations/izvekova-logistics.pdf" },
     { statusId: "pres-kosenko-status", url: "presentations/kosenko-standardization.pdf" },
+    { statusId: "pres-radiionov-status", url: "presentations/radionov.pdf" },
+    { statusId: "pres-lambakakhar-status", url: "presentations/lambakakhar-changes.pdf" },
+    { statusId: "pres-kalacheva-status", url: "presentations/kalacheva.pdf" },
+    { statusId: "pres-voronkov-status", url: "presentations/voronkov-tba.pdf" },
     { statusId: "pres-ten-status", url: "presentations/ten-quality.pdf" }
   ];
 
