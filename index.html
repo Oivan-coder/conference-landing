@@ -36,11 +36,13 @@
 
       <!-- Навигационные ссылки -->
       <div class="nav-links" id="nav-links">
-        <a href="#about">О событии</a>
-        <a href="#program">Программа</a>
-        <a href="#participants">Участники</a>
-        <a href="#info">Гостям</a>
-      </div>
+  <a href="#about">О событии</a>
+  <a href="#program">Программа</a>
+  <a href="#participants">Участники</a>
+  <a href="#gallery">Фотоотчёт</a>
+  <a href="#materials">Материалы</a>
+  <a href="#info">Гостям</a>
+</div>
 
       <!-- Бургер-меню -->
       <button class="nav-burger" id="nav-burger" aria-label="Открыть меню">
@@ -50,77 +52,57 @@
   </nav>
 
   <!-- Главный экран -->
-  <header class="hero">
-    <div class="container grid">
-      <!-- Левая колонка: текст -->
-      <div class="hero-content">
-        <div class="kicker">
-          <span class="tag">🏛️ Официальное мероприятие</span>
-          <span class="tag tag-primary">📍 Очное участие</span>
-        </div>
-
-        <div class="onsite-banner">
-          Участие — по спискам. Обязателен паспорт РФ.
-        </div>
-
-        <h1 class="title">
-          Лабораторная медицина Подмосковья:<br>
-          этапы, инновации, перспективы
-        </h1>
-
-        <p class="subtitle">
-          Живой разговор о стандартах, качестве и внедрении технологий в лабораторной службе региона. 
-          Таймлайн, треки и практические кейсы.
-        </p>
-
-        <div class="hero-cta">
-          <a class="btn" href="#program">Смотреть программу</a>
-          <button class="btn btn-outline" id="addToCal">Добавить в календарь</button>
-        </div>
-
-        <div class="meta">
-          <span>📅 25 сентября 2025 (четверг), 11:00–18:00</span>
-          <span>📍 Дом Правительства МО, г. Красногорск, БЦ «Новатор», 7 эт.</span>
-          <span>👥 200 участников</span>
-        </div>
-
-        <!-- Обратный отсчёт -->
-        <div class="countdown" id="countdown" aria-label="До начала">
-          <div class="countdown-wrapper">
-            <div class="countdown-title">До начала события</div>
-            <div class="countdown-grid">
-              <div class="cd-box">
-                <div class="cd-num" id="cd-d">00</div>
-                <div class="cd-label">дней</div>
-              </div>
-              <div class="cd-box">
-                <div class="cd-num" id="cd-h">00</div>
-                <div class="cd-label">часов</div>
-              </div>
-              <div class="cd-box">
-                <div class="cd-num" id="cd-m">00</div>
-                <div class="cd-label">мин</div>
-              </div>
-              <div class="cd-box">
-                <div class="cd-num" id="cd-s">00</div>
-                <div class="cd-label">сек</div>
-              </div>
-            </div>
-          </div>
-        </div>
+<header class="hero">
+  <div class="container grid">
+    <!-- Левая колонка: текст -->
+    <div class="hero-content">
+      <div class="kicker">
+        <span class="tag">🏛️ Официальное мероприятие</span>
+        <span class="tag tag-primary">✅ Завершено</span>
       </div>
 
-      <!-- Правая колонка: изображение -->
-      <div class="hero-image">
-        <img 
-          src="img/venue/novator-building.jpg" 
-          alt="Бизнес-центр «Новатор», Красногорск — место проведения конференции"
-          loading="lazy"
-        >
-        <p class="section-note">Место проведения: БЦ «Новатор», г. Красногорск, 7 этаж, конференц-зал</p>
+      <div class="event-completed-banner">
+        🎉 Мероприятие успешно завершено! Благодарим всех участников!
+      </div>
+
+      <h1 class="title">
+        Лабораторная медицина Подмосковья:<br>
+        этапы, инновации, перспективы
+      </h1>
+
+      <p class="subtitle">
+        Живой разговор о стандартах, качестве и внедрении технологий в лабораторной службе региона. 
+        Таймлайн, треки и практические кейсы.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn" href="#gallery">Смотреть фотоотчёт</a>
+        <a class="btn btn-outline" href="#materials">Материалы конференции</a>
+      </div>
+
+      <div class="meta">
+        <span>📅 25 сентября 2025 (четверг), 11:00–18:00</span>
+        <span>📍 Дом Правительства МО, г. Красногорск, БЦ «Новатор», 7 эт.</span>
+        <span>👥 200 участников</span>
+      </div>
+
+      <!-- Статус завершения вместо обратного отсчета -->
+      <div class="completed-status">
+        <span>✅ Мероприятие завершено</span>
       </div>
     </div>
-  </header>
+
+    <!-- Правая колонка: изображение -->
+    <div class="hero-image">
+      <img 
+        src="img/venue/novator-building.jpg" 
+        alt="Бизнес-центр «Новатор», Красногорск — место проведения конференции"
+        loading="lazy"
+      >
+      <p class="section-note">Место проведения: БЦ «Новатор», г. Красногорск, 7 этаж, конференц-зал</p>
+    </div>
+  </div>
+</header>
 
   <!-- О событии -->
   <section id="about" class="section">
@@ -595,6 +577,91 @@
     </div>
   </section>
 
+  <!-- Галерея -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2 class="section-title">Фотографии с мероприятия</h2>
+    <p class="section-note">25 сентября 2025 • БЦ «Новатор», Красногорск</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="img/gallery/photo1.jpg" alt="Регистрация участников" loading="lazy">
+        <div class="gallery-caption">Регистрация участников</div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/gallery/photo2.jpg" alt="Открытие конференции" loading="lazy">
+        <div class="gallery-caption">Открытие конференции</div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/gallery/photo3.jpg" alt="Выступление спикера" loading="lazy">
+        <div class="gallery-caption">Выступление И.В. Щеблыкиной-Монастырёвой</div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/gallery/photo4.jpg" alt="Работа в зале" loading="lazy">
+        <div class="gallery-caption">Работа в зале</div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/gallery/photo5.jpg" alt="Кофе-брейк" loading="lazy">
+        <div class="gallery-caption">Кофе-брейк и нетворкинг</div>
+      </div>
+      
+      <div class="gallery-item">
+        <img src="img/gallery/photo6.jpg" alt="Пленарное заседание" loading="lazy">
+        <div class="gallery-caption">Пленарное заседание</div>
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <p>Полный фотоотчёт будет доступен в течение недели</p>
+      <a href="#materials" class="btn materials-btn" style="margin-top: 16px;">
+        📥 Скачать материалы конференции
+      </a>
+    </div>
+  </div>
+</section>
+
+ <!-- Материалы конференции -->
+<section id="materials" class="section">
+  <div class="container">
+    <h2 class="section-title">Материалы конференции</h2>
+    <p class="section-note">Презентации и документы доступны для скачивания</p>
+
+    <div class="grid-2 gap-lg">
+      <div class="card-panel">
+        <div class="card-icon">📊</div>
+        <h3>Презентации спикеров</h3>
+        <ul class="list">
+          <li>Централизация лабораторной службы Московской области</li>
+          <li>Цитологическая диагностика: современные программы</li>
+          <li>Регистрация и приемка проб в лаборатории</li>
+          <li>Логистика и транспортировка проб</li>
+          <li>Стандартизация преаналитического этапа</li>
+        </ul>
+        <a href="#" class="btn btn-small" style="margin-top: 16px;">
+          📥 Скачать все презентации
+        </a>
+      </div>
+
+      <div class="card-panel">
+        <div class="card-icon">📋</div>
+        <h3>Документы и резолюции</h3>
+        <ul class="list">
+          <li>Итоговая резолюция конференции</li>
+          <li>Программа мероприятия</li>
+          <li>Список участников</li>
+          <li>Методические рекомендации</li>
+        </ul>
+        <a href="#" class="btn btn-small" style="margin-top: 16px;">
+          📥 Скачать документы
+        </a>
+      </div>
+    </div>
+  </div>
+</section> 
   <!-- Информация для гостей -->
   <!-- Информация для гостей -->
   <section id="info" class="section">
