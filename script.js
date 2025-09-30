@@ -16,7 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-
+// Скрываем обратный отсчет для завершенного мероприятия
+document.addEventListener('DOMContentLoaded', function() {
+  const countdown = document.getElementById('countdown');
+  if (countdown) {
+    countdown.style.display = 'none';
+  }
+  
+  // Обновляем текст кнопки "Добавить в календарь"
+  const calBtn = document.getElementById('addToCal');
+  if (calBtn) {
+    calBtn.textContent = '📅 Скачать материалы';
+    calBtn.href = '#materials';
+  }
+});
   // === 2. Прогресс-бар прокрутки (вверху экрана) ===
   const progressBar = document.getElementById('progress');
   window.addEventListener('scroll', () => {
